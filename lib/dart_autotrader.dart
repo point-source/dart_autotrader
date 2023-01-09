@@ -1,4 +1,10 @@
+@MappableLib(
+  createCombinedContainer: true,
+  discoveryMode: DiscoveryMode.package,
+)
 library dart_autotrader;
+
+import 'package:dart_mappable/dart_mappable.dart';
 
 export 'src/dart_autotrader_base.dart';
 export 'src/mapper_converter.dart';

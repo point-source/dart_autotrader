@@ -1,5 +1,6 @@
-import 'package:dart_autotrader/dart_autotrader.mapper.g.dart';
 import 'package:dart_mappable/dart_mappable.dart';
+
+part 'valuations.mapper.dart';
 
 @MappableClass()
 class Valuations with ValuationsMappable {

@@ -1,7 +1,8 @@
-import 'package:dart_autotrader/dart_autotrader.mapper.g.dart';
 import 'package:dart_mappable/dart_mappable.dart';
 
 import 'oem.dart';
+
+part 'vehicle.mapper.dart';
 
 @MappableClass()
 class Vehicle with VehicleMappable {
