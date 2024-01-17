@@ -1,473 +1,517 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element
+// ignore_for_file: unused_element, unnecessary_cast
+// ignore_for_file: strict_raw_type, inference_failure_on_untyped_parameter
 
 part of 'vehicle.dart';
 
-class VehicleMapper extends MapperBase<Vehicle> {
-  static MapperContainer container = MapperContainer(
-    mappers: {VehicleMapper()},
-  )..linkAll({OemMapper.container});
+class VehicleMapper extends ClassMapperBase<Vehicle> {
+  VehicleMapper._();
 
-  @override
-  VehicleMapperElement createElement(MapperContainer container) {
-    return VehicleMapperElement._(this, container);
+  static VehicleMapper? _instance;
+  static VehicleMapper ensureInitialized() {
+    if (_instance == null) {
+      MapperContainer.globals.use(_instance = VehicleMapper._());
+      OemMapper.ensureInitialized();
+    }
+    return _instance!;
   }
 
   @override
-  String get id => 'Vehicle';
+  final String id = 'Vehicle';
 
-  static final fromMap = container.fromMap<Vehicle>;
-  static final fromJson = container.fromJson<Vehicle>;
-}
-
-class VehicleMapperElement extends MapperElementBase<Vehicle> {
-  VehicleMapperElement._(super.mapper, super.container);
+  static String? _$ownershipCondition(Vehicle v) => v.ownershipCondition;
+  static const Field<Vehicle, String> _f$ownershipCondition =
+      Field('ownershipCondition', _$ownershipCondition, opt: true);
+  static String? _$registration(Vehicle v) => v.registration;
+  static const Field<Vehicle, String> _f$registration =
+      Field('registration', _$registration, opt: true);
+  static String? _$vin(Vehicle v) => v.vin;
+  static const Field<Vehicle, String> _f$vin = Field('vin', _$vin, opt: true);
+  static String? _$make(Vehicle v) => v.make;
+  static const Field<Vehicle, String> _f$make =
+      Field('make', _$make, opt: true);
+  static String? _$model(Vehicle v) => v.model;
+  static const Field<Vehicle, String> _f$model =
+      Field('model', _$model, opt: true);
+  static String? _$generation(Vehicle v) => v.generation;
+  static const Field<Vehicle, String> _f$generation =
+      Field('generation', _$generation, opt: true);
+  static String? _$derivative(Vehicle v) => v.derivative;
+  static const Field<Vehicle, String> _f$derivative =
+      Field('derivative', _$derivative, opt: true);
+  static String? _$derivativeId(Vehicle v) => v.derivativeId;
+  static const Field<Vehicle, String> _f$derivativeId =
+      Field('derivativeId', _$derivativeId, opt: true);
+  static String? _$vehicleType(Vehicle v) => v.vehicleType;
+  static const Field<Vehicle, String> _f$vehicleType =
+      Field('vehicleType', _$vehicleType, opt: true);
+  static String? _$trim(Vehicle v) => v.trim;
+  static const Field<Vehicle, String> _f$trim =
+      Field('trim', _$trim, opt: true);
+  static String? _$bodyType(Vehicle v) => v.bodyType;
+  static const Field<Vehicle, String> _f$bodyType =
+      Field('bodyType', _$bodyType, opt: true);
+  static String? _$fuelType(Vehicle v) => v.fuelType;
+  static const Field<Vehicle, String> _f$fuelType =
+      Field('fuelType', _$fuelType, opt: true);
+  static String? _$cabType(Vehicle v) => v.cabType;
+  static const Field<Vehicle, String> _f$cabType =
+      Field('cabType', _$cabType, opt: true);
+  static String? _$transmissionType(Vehicle v) => v.transmissionType;
+  static const Field<Vehicle, String> _f$transmissionType =
+      Field('transmissionType', _$transmissionType, opt: true);
+  static String? _$wheelbaseType(Vehicle v) => v.wheelbaseType;
+  static const Field<Vehicle, String> _f$wheelbaseType =
+      Field('wheelbaseType', _$wheelbaseType, opt: true);
+  static String? _$roofHeightType(Vehicle v) => v.roofHeightType;
+  static const Field<Vehicle, String> _f$roofHeightType =
+      Field('roofHeightType', _$roofHeightType, opt: true);
+  static String? _$drivetrain(Vehicle v) => v.drivetrain;
+  static const Field<Vehicle, String> _f$drivetrain =
+      Field('drivetrain', _$drivetrain, opt: true);
+  static int? _$seats(Vehicle v) => v.seats;
+  static const Field<Vehicle, int> _f$seats =
+      Field('seats', _$seats, opt: true);
+  static int? _$doors(Vehicle v) => v.doors;
+  static const Field<Vehicle, int> _f$doors =
+      Field('doors', _$doors, opt: true);
+  static int? _$cylinders(Vehicle v) => v.cylinders;
+  static const Field<Vehicle, int> _f$cylinders =
+      Field('cylinders', _$cylinders, opt: true);
+  static int? _$valves(Vehicle v) => v.valves;
+  static const Field<Vehicle, int> _f$valves =
+      Field('valves', _$valves, opt: true);
+  static int? _$engineTorqueNM(Vehicle v) => v.engineTorqueNM;
+  static const Field<Vehicle, int> _f$engineTorqueNM =
+      Field('engineTorqueNM', _$engineTorqueNM, opt: true);
+  static int? _$co2EmissionGPKM(Vehicle v) => v.co2EmissionGPKM;
+  static const Field<Vehicle, int> _f$co2EmissionGPKM =
+      Field('co2EmissionGPKM', _$co2EmissionGPKM, opt: true);
+  static int? _$topSpeedMPH(Vehicle v) => v.topSpeedMPH;
+  static const Field<Vehicle, int> _f$topSpeedMPH =
+      Field('topSpeedMPH', _$topSpeedMPH, opt: true);
+  static double? _$zeroToSixtyMPHSeconds(Vehicle v) => v.zeroToSixtyMPHSeconds;
+  static const Field<Vehicle, double> _f$zeroToSixtyMPHSeconds =
+      Field('zeroToSixtyMPHSeconds', _$zeroToSixtyMPHSeconds, opt: true);
+  static double? _$zeroToOneHundredKMPHSeconds(Vehicle v) =>
+      v.zeroToOneHundredKMPHSeconds;
+  static const Field<Vehicle, double> _f$zeroToOneHundredKMPHSeconds = Field(
+      'zeroToOneHundredKMPHSeconds', _$zeroToOneHundredKMPHSeconds,
+      opt: true);
+  static double? _$badgeEngineSizeLitres(Vehicle v) => v.badgeEngineSizeLitres;
+  static const Field<Vehicle, double> _f$badgeEngineSizeLitres =
+      Field('badgeEngineSizeLitres', _$badgeEngineSizeLitres, opt: true);
+  static int? _$engineCapacityCC(Vehicle v) => v.engineCapacityCC;
+  static const Field<Vehicle, int> _f$engineCapacityCC =
+      Field('engineCapacityCC', _$engineCapacityCC, opt: true);
+  static int? _$enginePowerBHP(Vehicle v) => v.enginePowerBHP;
+  static const Field<Vehicle, int> _f$enginePowerBHP =
+      Field('enginePowerBHP', _$enginePowerBHP, opt: true);
+  static int? _$fuelCapacityLitres(Vehicle v) => v.fuelCapacityLitres;
+  static const Field<Vehicle, int> _f$fuelCapacityLitres =
+      Field('fuelCapacityLitres', _$fuelCapacityLitres, opt: true);
+  static String? _$emissionClass(Vehicle v) => v.emissionClass;
+  static const Field<Vehicle, String> _f$emissionClass =
+      Field('emissionClass', _$emissionClass, opt: true);
+  static int? _$owners(Vehicle v) => v.owners;
+  static const Field<Vehicle, int> _f$owners =
+      Field('owners', _$owners, opt: true);
+  static double? _$fuelEconomyNEDCExtraUrbanMPG(Vehicle v) =>
+      v.fuelEconomyNEDCExtraUrbanMPG;
+  static const Field<Vehicle, double> _f$fuelEconomyNEDCExtraUrbanMPG = Field(
+      'fuelEconomyNEDCExtraUrbanMPG', _$fuelEconomyNEDCExtraUrbanMPG,
+      opt: true);
+  static double? _$fuelEconomyNEDCUrbanMPG(Vehicle v) =>
+      v.fuelEconomyNEDCUrbanMPG;
+  static const Field<Vehicle, double> _f$fuelEconomyNEDCUrbanMPG =
+      Field('fuelEconomyNEDCUrbanMPG', _$fuelEconomyNEDCUrbanMPG, opt: true);
+  static double? _$fuelEconomyNEDCCombinedMPG(Vehicle v) =>
+      v.fuelEconomyNEDCCombinedMPG;
+  static const Field<Vehicle, double> _f$fuelEconomyNEDCCombinedMPG = Field(
+      'fuelEconomyNEDCCombinedMPG', _$fuelEconomyNEDCCombinedMPG,
+      opt: true);
+  static double? _$fuelEconomyWLTPLowMPG(Vehicle v) => v.fuelEconomyWLTPLowMPG;
+  static const Field<Vehicle, double> _f$fuelEconomyWLTPLowMPG =
+      Field('fuelEconomyWLTPLowMPG', _$fuelEconomyWLTPLowMPG, opt: true);
+  static double? _$fuelEconomyWLTPMediumMPG(Vehicle v) =>
+      v.fuelEconomyWLTPMediumMPG;
+  static const Field<Vehicle, double> _f$fuelEconomyWLTPMediumMPG =
+      Field('fuelEconomyWLTPMediumMPG', _$fuelEconomyWLTPMediumMPG, opt: true);
+  static double? _$fuelEconomyWLTPHighMPG(Vehicle v) =>
+      v.fuelEconomyWLTPHighMPG;
+  static const Field<Vehicle, double> _f$fuelEconomyWLTPHighMPG =
+      Field('fuelEconomyWLTPHighMPG', _$fuelEconomyWLTPHighMPG, opt: true);
+  static double? _$fuelEconomyWLTPExtraHighMPG(Vehicle v) =>
+      v.fuelEconomyWLTPExtraHighMPG;
+  static const Field<Vehicle, double> _f$fuelEconomyWLTPExtraHighMPG = Field(
+      'fuelEconomyWLTPExtraHighMPG', _$fuelEconomyWLTPExtraHighMPG,
+      opt: true);
+  static double? _$fuelEconomyWLTPCombinedMPG(Vehicle v) =>
+      v.fuelEconomyWLTPCombinedMPG;
+  static const Field<Vehicle, double> _f$fuelEconomyWLTPCombinedMPG = Field(
+      'fuelEconomyWLTPCombinedMPG', _$fuelEconomyWLTPCombinedMPG,
+      opt: true);
+  static double? _$bootSpaceSeatsUpLitres(Vehicle v) =>
+      v.bootSpaceSeatsUpLitres;
+  static const Field<Vehicle, double> _f$bootSpaceSeatsUpLitres =
+      Field('bootSpaceSeatsUpLitres', _$bootSpaceSeatsUpLitres, opt: true);
+  static String? _$insuranceGroup(Vehicle v) => v.insuranceGroup;
+  static const Field<Vehicle, String> _f$insuranceGroup =
+      Field('insuranceGroup', _$insuranceGroup, opt: true);
+  static String? _$insuranceSecurityCode(Vehicle v) => v.insuranceSecurityCode;
+  static const Field<Vehicle, String> _f$insuranceSecurityCode =
+      Field('insuranceSecurityCode', _$insuranceSecurityCode, opt: true);
+  static String? _$firstRegistrationDate(Vehicle v) => v.firstRegistrationDate;
+  static const Field<Vehicle, String> _f$firstRegistrationDate =
+      Field('firstRegistrationDate', _$firstRegistrationDate, opt: true);
+  static String? _$colour(Vehicle v) => v.colour;
+  static const Field<Vehicle, String> _f$colour =
+      Field('colour', _$colour, opt: true);
+  static String? _$style(Vehicle v) => v.style;
+  static const Field<Vehicle, String> _f$style =
+      Field('style', _$style, opt: true);
+  static String? _$subStyle(Vehicle v) => v.subStyle;
+  static const Field<Vehicle, String> _f$subStyle =
+      Field('subStyle', _$subStyle, opt: true);
+  static int? _$lengthMM(Vehicle v) => v.lengthMM;
+  static const Field<Vehicle, int> _f$lengthMM =
+      Field('lengthMM', _$lengthMM, opt: true);
+  static int? _$heightMM(Vehicle v) => v.heightMM;
+  static const Field<Vehicle, int> _f$heightMM =
+      Field('heightMM', _$heightMM, opt: true);
+  static int? _$widthMM(Vehicle v) => v.widthMM;
+  static const Field<Vehicle, int> _f$widthMM =
+      Field('widthMM', _$widthMM, opt: true);
+  static int? _$payloadLengthMM(Vehicle v) => v.payloadLengthMM;
+  static const Field<Vehicle, int> _f$payloadLengthMM =
+      Field('payloadLengthMM', _$payloadLengthMM, opt: true);
+  static int? _$payloadWidthMM(Vehicle v) => v.payloadWidthMM;
+  static const Field<Vehicle, int> _f$payloadWidthMM =
+      Field('payloadWidthMM', _$payloadWidthMM, opt: true);
+  static int? _$payloadHeightMM(Vehicle v) => v.payloadHeightMM;
+  static const Field<Vehicle, int> _f$payloadHeightMM =
+      Field('payloadHeightMM', _$payloadHeightMM, opt: true);
+  static int? _$payloadWeightKG(Vehicle v) => v.payloadWeightKG;
+  static const Field<Vehicle, int> _f$payloadWeightKG =
+      Field('payloadWeightKG', _$payloadWeightKG, opt: true);
+  static int? _$minimumKerbWeightKG(Vehicle v) => v.minimumKerbWeightKG;
+  static const Field<Vehicle, int> _f$minimumKerbWeightKG =
+      Field('minimumKerbWeightKG', _$minimumKerbWeightKG, opt: true);
+  static int? _$grossVehicleWeightKG(Vehicle v) => v.grossVehicleWeightKG;
+  static const Field<Vehicle, int> _f$grossVehicleWeightKG =
+      Field('grossVehicleWeightKG', _$grossVehicleWeightKG, opt: true);
+  static String? _$engineNumber(Vehicle v) => v.engineNumber;
+  static const Field<Vehicle, String> _f$engineNumber =
+      Field('engineNumber', _$engineNumber, opt: true);
+  static String? _$fuelDelivery(Vehicle v) => v.fuelDelivery;
+  static const Field<Vehicle, String> _f$fuelDelivery =
+      Field('fuelDelivery', _$fuelDelivery, opt: true);
+  static int? _$gears(Vehicle v) => v.gears;
+  static const Field<Vehicle, int> _f$gears =
+      Field('gears', _$gears, opt: true);
+  static bool? _$startStop(Vehicle v) => v.startStop;
+  static const Field<Vehicle, bool> _f$startStop =
+      Field('startStop', _$startStop, opt: true);
+  static int? _$enginePowerPS(Vehicle v) => v.enginePowerPS;
+  static const Field<Vehicle, int> _f$enginePowerPS =
+      Field('enginePowerPS', _$enginePowerPS, opt: true);
+  static double? _$engineTorqueLBFT(Vehicle v) => v.engineTorqueLBFT;
+  static const Field<Vehicle, double> _f$engineTorqueLBFT =
+      Field('engineTorqueLBFT', _$engineTorqueLBFT, opt: true);
+  static int? _$bootSpaceSeatsDownLitres(Vehicle v) =>
+      v.bootSpaceSeatsDownLitres;
+  static const Field<Vehicle, int> _f$bootSpaceSeatsDownLitres =
+      Field('bootSpaceSeatsDownLitres', _$bootSpaceSeatsDownLitres, opt: true);
+  static String? _$batteryChargeTime(Vehicle v) => v.batteryChargeTime;
+  static const Field<Vehicle, String> _f$batteryChargeTime =
+      Field('batteryChargeTime', _$batteryChargeTime, opt: true);
+  static String? _$batteryQuickChargeTime(Vehicle v) =>
+      v.batteryQuickChargeTime;
+  static const Field<Vehicle, String> _f$batteryQuickChargeTime =
+      Field('batteryQuickChargeTime', _$batteryQuickChargeTime, opt: true);
+  static int? _$batteryRangeMiles(Vehicle v) => v.batteryRangeMiles;
+  static const Field<Vehicle, int> _f$batteryRangeMiles =
+      Field('batteryRangeMiles', _$batteryRangeMiles, opt: true);
+  static int? _$batteryCapacityKWH(Vehicle v) => v.batteryCapacityKWH;
+  static const Field<Vehicle, int> _f$batteryCapacityKWH =
+      Field('batteryCapacityKWH', _$batteryCapacityKWH, opt: true);
+  static int? _$batteryUsableCapacityKWH(Vehicle v) =>
+      v.batteryUsableCapacityKWH;
+  static const Field<Vehicle, int> _f$batteryUsableCapacityKWH =
+      Field('batteryUsableCapacityKWH', _$batteryUsableCapacityKWH, opt: true);
+  static int? _$wheelbaseMM(Vehicle v) => v.wheelbaseMM;
+  static const Field<Vehicle, int> _f$wheelbaseMM =
+      Field('wheelbaseMM', _$wheelbaseMM, opt: true);
+  static int? _$grossCombinedWeightKG(Vehicle v) => v.grossCombinedWeightKG;
+  static const Field<Vehicle, int> _f$grossCombinedWeightKG =
+      Field('grossCombinedWeightKG', _$grossCombinedWeightKG, opt: true);
+  static int? _$grossTrainWeightKG(Vehicle v) => v.grossTrainWeightKG;
+  static const Field<Vehicle, int> _f$grossTrainWeightKG =
+      Field('grossTrainWeightKG', _$grossTrainWeightKG, opt: true);
+  static int? _$boreMM(Vehicle v) => v.boreMM;
+  static const Field<Vehicle, int> _f$boreMM =
+      Field('boreMM', _$boreMM, opt: true);
+  static int? _$strokeMM(Vehicle v) => v.strokeMM;
+  static const Field<Vehicle, int> _f$strokeMM =
+      Field('strokeMM', _$strokeMM, opt: true);
+  static String? _$cylinderArrangement(Vehicle v) => v.cylinderArrangement;
+  static const Field<Vehicle, String> _f$cylinderArrangement =
+      Field('cylinderArrangement', _$cylinderArrangement, opt: true);
+  static String? _$engineMake(Vehicle v) => v.engineMake;
+  static const Field<Vehicle, String> _f$engineMake =
+      Field('engineMake', _$engineMake, opt: true);
+  static String? _$valveGear(Vehicle v) => v.valveGear;
+  static const Field<Vehicle, String> _f$valveGear =
+      Field('valveGear', _$valveGear, opt: true);
+  static int? _$axles(Vehicle v) => v.axles;
+  static const Field<Vehicle, int> _f$axles =
+      Field('axles', _$axles, opt: true);
+  static String? _$countryOfOrigin(Vehicle v) => v.countryOfOrigin;
+  static const Field<Vehicle, String> _f$countryOfOrigin =
+      Field('countryOfOrigin', _$countryOfOrigin, opt: true);
+  static String? _$driveType(Vehicle v) => v.driveType;
+  static const Field<Vehicle, String> _f$driveType =
+      Field('driveType', _$driveType, opt: true);
+  static int? _$payloadVolumeCubicMetres(Vehicle v) =>
+      v.payloadVolumeCubicMetres;
+  static const Field<Vehicle, int> _f$payloadVolumeCubicMetres =
+      Field('payloadVolumeCubicMetres', _$payloadVolumeCubicMetres, opt: true);
+  static bool? _$rde2Compliant(Vehicle v) => v.rde2Compliant;
+  static const Field<Vehicle, bool> _f$rde2Compliant =
+      Field('rde2Compliant', _$rde2Compliant, opt: true);
+  static String? _$sector(Vehicle v) => v.sector;
+  static const Field<Vehicle, String> _f$sector =
+      Field('sector', _$sector, opt: true);
+  static Oem? _$oem(Vehicle v) => v.oem;
+  static const Field<Vehicle, Oem> _f$oem = Field('oem', _$oem, opt: true);
 
   @override
-  Function get decoder => decode;
-  Vehicle decode(dynamic v) =>
-      checkedType(v, (Map<String, dynamic> map) => fromMap(map));
-  Vehicle fromMap(Map<String, dynamic> map) => Vehicle(
-      ownershipCondition: container.$getOpt(map, 'ownershipCondition'),
-      registration: container.$getOpt(map, 'registration'),
-      vin: container.$getOpt(map, 'vin'),
-      make: container.$getOpt(map, 'make'),
-      model: container.$getOpt(map, 'model'),
-      generation: container.$getOpt(map, 'generation'),
-      derivative: container.$getOpt(map, 'derivative'),
-      derivativeId: container.$getOpt(map, 'derivativeId'),
-      vehicleType: container.$getOpt(map, 'vehicleType'),
-      trim: container.$getOpt(map, 'trim'),
-      bodyType: container.$getOpt(map, 'bodyType'),
-      fuelType: container.$getOpt(map, 'fuelType'),
-      cabType: container.$getOpt(map, 'cabType'),
-      transmissionType: container.$getOpt(map, 'transmissionType'),
-      wheelbaseType: container.$getOpt(map, 'wheelbaseType'),
-      roofHeightType: container.$getOpt(map, 'roofHeightType'),
-      drivetrain: container.$getOpt(map, 'drivetrain'),
-      seats: container.$getOpt(map, 'seats'),
-      doors: container.$getOpt(map, 'doors'),
-      cylinders: container.$getOpt(map, 'cylinders'),
-      valves: container.$getOpt(map, 'valves'),
-      engineTorqueNM: container.$getOpt(map, 'engineTorqueNM'),
-      co2EmissionGPKM: container.$getOpt(map, 'co2EmissionGPKM'),
-      topSpeedMPH: container.$getOpt(map, 'topSpeedMPH'),
-      zeroToSixtyMPHSeconds: container.$getOpt(map, 'zeroToSixtyMPHSeconds'),
-      zeroToOneHundredKMPHSeconds:
-          container.$getOpt(map, 'zeroToOneHundredKMPHSeconds'),
-      badgeEngineSizeLitres: container.$getOpt(map, 'badgeEngineSizeLitres'),
-      engineCapacityCC: container.$getOpt(map, 'engineCapacityCC'),
-      enginePowerBHP: container.$getOpt(map, 'enginePowerBHP'),
-      fuelCapacityLitres: container.$getOpt(map, 'fuelCapacityLitres'),
-      emissionClass: container.$getOpt(map, 'emissionClass'),
-      owners: container.$getOpt(map, 'owners'),
-      fuelEconomyNEDCExtraUrbanMPG:
-          container.$getOpt(map, 'fuelEconomyNEDCExtraUrbanMPG'),
-      fuelEconomyNEDCUrbanMPG:
-          container.$getOpt(map, 'fuelEconomyNEDCUrbanMPG'),
-      fuelEconomyNEDCCombinedMPG:
-          container.$getOpt(map, 'fuelEconomyNEDCCombinedMPG'),
-      fuelEconomyWLTPLowMPG: container.$getOpt(map, 'fuelEconomyWLTPLowMPG'),
-      fuelEconomyWLTPMediumMPG:
-          container.$getOpt(map, 'fuelEconomyWLTPMediumMPG'),
-      fuelEconomyWLTPHighMPG: container.$getOpt(map, 'fuelEconomyWLTPHighMPG'),
-      fuelEconomyWLTPExtraHighMPG:
-          container.$getOpt(map, 'fuelEconomyWLTPExtraHighMPG'),
-      fuelEconomyWLTPCombinedMPG:
-          container.$getOpt(map, 'fuelEconomyWLTPCombinedMPG'),
-      bootSpaceSeatsUpLitres: container.$getOpt(map, 'bootSpaceSeatsUpLitres'),
-      insuranceGroup: container.$getOpt(map, 'insuranceGroup'),
-      insuranceSecurityCode: container.$getOpt(map, 'insuranceSecurityCode'),
-      firstRegistrationDate: container.$getOpt(map, 'firstRegistrationDate'),
-      colour: container.$getOpt(map, 'colour'),
-      style: container.$getOpt(map, 'style'),
-      subStyle: container.$getOpt(map, 'subStyle'),
-      lengthMM: container.$getOpt(map, 'lengthMM'),
-      heightMM: container.$getOpt(map, 'heightMM'),
-      widthMM: container.$getOpt(map, 'widthMM'),
-      payloadLengthMM: container.$getOpt(map, 'payloadLengthMM'),
-      payloadWidthMM: container.$getOpt(map, 'payloadWidthMM'),
-      payloadHeightMM: container.$getOpt(map, 'payloadHeightMM'),
-      payloadWeightKG: container.$getOpt(map, 'payloadWeightKG'),
-      minimumKerbWeightKG: container.$getOpt(map, 'minimumKerbWeightKG'),
-      grossVehicleWeightKG: container.$getOpt(map, 'grossVehicleWeightKG'),
-      engineNumber: container.$getOpt(map, 'engineNumber'),
-      fuelDelivery: container.$getOpt(map, 'fuelDelivery'),
-      gears: container.$getOpt(map, 'gears'),
-      startStop: container.$getOpt(map, 'startStop'),
-      enginePowerPS: container.$getOpt(map, 'enginePowerPS'),
-      engineTorqueLBFT: container.$getOpt(map, 'engineTorqueLBFT'),
-      bootSpaceSeatsDownLitres:
-          container.$getOpt(map, 'bootSpaceSeatsDownLitres'),
-      batteryChargeTime: container.$getOpt(map, 'batteryChargeTime'),
-      batteryQuickChargeTime: container.$getOpt(map, 'batteryQuickChargeTime'),
-      batteryRangeMiles: container.$getOpt(map, 'batteryRangeMiles'),
-      batteryCapacityKWH: container.$getOpt(map, 'batteryCapacityKWH'),
-      batteryUsableCapacityKWH:
-          container.$getOpt(map, 'batteryUsableCapacityKWH'),
-      wheelbaseMM: container.$getOpt(map, 'wheelbaseMM'),
-      grossCombinedWeightKG: container.$getOpt(map, 'grossCombinedWeightKG'),
-      grossTrainWeightKG: container.$getOpt(map, 'grossTrainWeightKG'),
-      boreMM: container.$getOpt(map, 'boreMM'),
-      strokeMM: container.$getOpt(map, 'strokeMM'),
-      cylinderArrangement: container.$getOpt(map, 'cylinderArrangement'),
-      engineMake: container.$getOpt(map, 'engineMake'),
-      valveGear: container.$getOpt(map, 'valveGear'),
-      axles: container.$getOpt(map, 'axles'),
-      countryOfOrigin: container.$getOpt(map, 'countryOfOrigin'),
-      driveType: container.$getOpt(map, 'driveType'),
-      payloadVolumeCubicMetres:
-          container.$getOpt(map, 'payloadVolumeCubicMetres'),
-      rde2Compliant: container.$getOpt(map, 'rde2Compliant'),
-      sector: container.$getOpt(map, 'sector'),
-      oem: container.$getOpt(map, 'oem'));
+  final MappableFields<Vehicle> fields = const {
+    #ownershipCondition: _f$ownershipCondition,
+    #registration: _f$registration,
+    #vin: _f$vin,
+    #make: _f$make,
+    #model: _f$model,
+    #generation: _f$generation,
+    #derivative: _f$derivative,
+    #derivativeId: _f$derivativeId,
+    #vehicleType: _f$vehicleType,
+    #trim: _f$trim,
+    #bodyType: _f$bodyType,
+    #fuelType: _f$fuelType,
+    #cabType: _f$cabType,
+    #transmissionType: _f$transmissionType,
+    #wheelbaseType: _f$wheelbaseType,
+    #roofHeightType: _f$roofHeightType,
+    #drivetrain: _f$drivetrain,
+    #seats: _f$seats,
+    #doors: _f$doors,
+    #cylinders: _f$cylinders,
+    #valves: _f$valves,
+    #engineTorqueNM: _f$engineTorqueNM,
+    #co2EmissionGPKM: _f$co2EmissionGPKM,
+    #topSpeedMPH: _f$topSpeedMPH,
+    #zeroToSixtyMPHSeconds: _f$zeroToSixtyMPHSeconds,
+    #zeroToOneHundredKMPHSeconds: _f$zeroToOneHundredKMPHSeconds,
+    #badgeEngineSizeLitres: _f$badgeEngineSizeLitres,
+    #engineCapacityCC: _f$engineCapacityCC,
+    #enginePowerBHP: _f$enginePowerBHP,
+    #fuelCapacityLitres: _f$fuelCapacityLitres,
+    #emissionClass: _f$emissionClass,
+    #owners: _f$owners,
+    #fuelEconomyNEDCExtraUrbanMPG: _f$fuelEconomyNEDCExtraUrbanMPG,
+    #fuelEconomyNEDCUrbanMPG: _f$fuelEconomyNEDCUrbanMPG,
+    #fuelEconomyNEDCCombinedMPG: _f$fuelEconomyNEDCCombinedMPG,
+    #fuelEconomyWLTPLowMPG: _f$fuelEconomyWLTPLowMPG,
+    #fuelEconomyWLTPMediumMPG: _f$fuelEconomyWLTPMediumMPG,
+    #fuelEconomyWLTPHighMPG: _f$fuelEconomyWLTPHighMPG,
+    #fuelEconomyWLTPExtraHighMPG: _f$fuelEconomyWLTPExtraHighMPG,
+    #fuelEconomyWLTPCombinedMPG: _f$fuelEconomyWLTPCombinedMPG,
+    #bootSpaceSeatsUpLitres: _f$bootSpaceSeatsUpLitres,
+    #insuranceGroup: _f$insuranceGroup,
+    #insuranceSecurityCode: _f$insuranceSecurityCode,
+    #firstRegistrationDate: _f$firstRegistrationDate,
+    #colour: _f$colour,
+    #style: _f$style,
+    #subStyle: _f$subStyle,
+    #lengthMM: _f$lengthMM,
+    #heightMM: _f$heightMM,
+    #widthMM: _f$widthMM,
+    #payloadLengthMM: _f$payloadLengthMM,
+    #payloadWidthMM: _f$payloadWidthMM,
+    #payloadHeightMM: _f$payloadHeightMM,
+    #payloadWeightKG: _f$payloadWeightKG,
+    #minimumKerbWeightKG: _f$minimumKerbWeightKG,
+    #grossVehicleWeightKG: _f$grossVehicleWeightKG,
+    #engineNumber: _f$engineNumber,
+    #fuelDelivery: _f$fuelDelivery,
+    #gears: _f$gears,
+    #startStop: _f$startStop,
+    #enginePowerPS: _f$enginePowerPS,
+    #engineTorqueLBFT: _f$engineTorqueLBFT,
+    #bootSpaceSeatsDownLitres: _f$bootSpaceSeatsDownLitres,
+    #batteryChargeTime: _f$batteryChargeTime,
+    #batteryQuickChargeTime: _f$batteryQuickChargeTime,
+    #batteryRangeMiles: _f$batteryRangeMiles,
+    #batteryCapacityKWH: _f$batteryCapacityKWH,
+    #batteryUsableCapacityKWH: _f$batteryUsableCapacityKWH,
+    #wheelbaseMM: _f$wheelbaseMM,
+    #grossCombinedWeightKG: _f$grossCombinedWeightKG,
+    #grossTrainWeightKG: _f$grossTrainWeightKG,
+    #boreMM: _f$boreMM,
+    #strokeMM: _f$strokeMM,
+    #cylinderArrangement: _f$cylinderArrangement,
+    #engineMake: _f$engineMake,
+    #valveGear: _f$valveGear,
+    #axles: _f$axles,
+    #countryOfOrigin: _f$countryOfOrigin,
+    #driveType: _f$driveType,
+    #payloadVolumeCubicMetres: _f$payloadVolumeCubicMetres,
+    #rde2Compliant: _f$rde2Compliant,
+    #sector: _f$sector,
+    #oem: _f$oem,
+  };
+
+  static Vehicle _instantiate(DecodingData data) {
+    return Vehicle(
+        ownershipCondition: data.dec(_f$ownershipCondition),
+        registration: data.dec(_f$registration),
+        vin: data.dec(_f$vin),
+        make: data.dec(_f$make),
+        model: data.dec(_f$model),
+        generation: data.dec(_f$generation),
+        derivative: data.dec(_f$derivative),
+        derivativeId: data.dec(_f$derivativeId),
+        vehicleType: data.dec(_f$vehicleType),
+        trim: data.dec(_f$trim),
+        bodyType: data.dec(_f$bodyType),
+        fuelType: data.dec(_f$fuelType),
+        cabType: data.dec(_f$cabType),
+        transmissionType: data.dec(_f$transmissionType),
+        wheelbaseType: data.dec(_f$wheelbaseType),
+        roofHeightType: data.dec(_f$roofHeightType),
+        drivetrain: data.dec(_f$drivetrain),
+        seats: data.dec(_f$seats),
+        doors: data.dec(_f$doors),
+        cylinders: data.dec(_f$cylinders),
+        valves: data.dec(_f$valves),
+        engineTorqueNM: data.dec(_f$engineTorqueNM),
+        co2EmissionGPKM: data.dec(_f$co2EmissionGPKM),
+        topSpeedMPH: data.dec(_f$topSpeedMPH),
+        zeroToSixtyMPHSeconds: data.dec(_f$zeroToSixtyMPHSeconds),
+        zeroToOneHundredKMPHSeconds: data.dec(_f$zeroToOneHundredKMPHSeconds),
+        badgeEngineSizeLitres: data.dec(_f$badgeEngineSizeLitres),
+        engineCapacityCC: data.dec(_f$engineCapacityCC),
+        enginePowerBHP: data.dec(_f$enginePowerBHP),
+        fuelCapacityLitres: data.dec(_f$fuelCapacityLitres),
+        emissionClass: data.dec(_f$emissionClass),
+        owners: data.dec(_f$owners),
+        fuelEconomyNEDCExtraUrbanMPG: data.dec(_f$fuelEconomyNEDCExtraUrbanMPG),
+        fuelEconomyNEDCUrbanMPG: data.dec(_f$fuelEconomyNEDCUrbanMPG),
+        fuelEconomyNEDCCombinedMPG: data.dec(_f$fuelEconomyNEDCCombinedMPG),
+        fuelEconomyWLTPLowMPG: data.dec(_f$fuelEconomyWLTPLowMPG),
+        fuelEconomyWLTPMediumMPG: data.dec(_f$fuelEconomyWLTPMediumMPG),
+        fuelEconomyWLTPHighMPG: data.dec(_f$fuelEconomyWLTPHighMPG),
+        fuelEconomyWLTPExtraHighMPG: data.dec(_f$fuelEconomyWLTPExtraHighMPG),
+        fuelEconomyWLTPCombinedMPG: data.dec(_f$fuelEconomyWLTPCombinedMPG),
+        bootSpaceSeatsUpLitres: data.dec(_f$bootSpaceSeatsUpLitres),
+        insuranceGroup: data.dec(_f$insuranceGroup),
+        insuranceSecurityCode: data.dec(_f$insuranceSecurityCode),
+        firstRegistrationDate: data.dec(_f$firstRegistrationDate),
+        colour: data.dec(_f$colour),
+        style: data.dec(_f$style),
+        subStyle: data.dec(_f$subStyle),
+        lengthMM: data.dec(_f$lengthMM),
+        heightMM: data.dec(_f$heightMM),
+        widthMM: data.dec(_f$widthMM),
+        payloadLengthMM: data.dec(_f$payloadLengthMM),
+        payloadWidthMM: data.dec(_f$payloadWidthMM),
+        payloadHeightMM: data.dec(_f$payloadHeightMM),
+        payloadWeightKG: data.dec(_f$payloadWeightKG),
+        minimumKerbWeightKG: data.dec(_f$minimumKerbWeightKG),
+        grossVehicleWeightKG: data.dec(_f$grossVehicleWeightKG),
+        engineNumber: data.dec(_f$engineNumber),
+        fuelDelivery: data.dec(_f$fuelDelivery),
+        gears: data.dec(_f$gears),
+        startStop: data.dec(_f$startStop),
+        enginePowerPS: data.dec(_f$enginePowerPS),
+        engineTorqueLBFT: data.dec(_f$engineTorqueLBFT),
+        bootSpaceSeatsDownLitres: data.dec(_f$bootSpaceSeatsDownLitres),
+        batteryChargeTime: data.dec(_f$batteryChargeTime),
+        batteryQuickChargeTime: data.dec(_f$batteryQuickChargeTime),
+        batteryRangeMiles: data.dec(_f$batteryRangeMiles),
+        batteryCapacityKWH: data.dec(_f$batteryCapacityKWH),
+        batteryUsableCapacityKWH: data.dec(_f$batteryUsableCapacityKWH),
+        wheelbaseMM: data.dec(_f$wheelbaseMM),
+        grossCombinedWeightKG: data.dec(_f$grossCombinedWeightKG),
+        grossTrainWeightKG: data.dec(_f$grossTrainWeightKG),
+        boreMM: data.dec(_f$boreMM),
+        strokeMM: data.dec(_f$strokeMM),
+        cylinderArrangement: data.dec(_f$cylinderArrangement),
+        engineMake: data.dec(_f$engineMake),
+        valveGear: data.dec(_f$valveGear),
+        axles: data.dec(_f$axles),
+        countryOfOrigin: data.dec(_f$countryOfOrigin),
+        driveType: data.dec(_f$driveType),
+        payloadVolumeCubicMetres: data.dec(_f$payloadVolumeCubicMetres),
+        rde2Compliant: data.dec(_f$rde2Compliant),
+        sector: data.dec(_f$sector),
+        oem: data.dec(_f$oem));
+  }
 
   @override
-  Function get encoder => encode;
-  dynamic encode(Vehicle v) => toMap(v);
-  Map<String, dynamic> toMap(Vehicle v) => {
-        'ownershipCondition':
-            container.$enc(v.ownershipCondition, 'ownershipCondition'),
-        'registration': container.$enc(v.registration, 'registration'),
-        'vin': container.$enc(v.vin, 'vin'),
-        'make': container.$enc(v.make, 'make'),
-        'model': container.$enc(v.model, 'model'),
-        'generation': container.$enc(v.generation, 'generation'),
-        'derivative': container.$enc(v.derivative, 'derivative'),
-        'derivativeId': container.$enc(v.derivativeId, 'derivativeId'),
-        'vehicleType': container.$enc(v.vehicleType, 'vehicleType'),
-        'trim': container.$enc(v.trim, 'trim'),
-        'bodyType': container.$enc(v.bodyType, 'bodyType'),
-        'fuelType': container.$enc(v.fuelType, 'fuelType'),
-        'cabType': container.$enc(v.cabType, 'cabType'),
-        'transmissionType':
-            container.$enc(v.transmissionType, 'transmissionType'),
-        'wheelbaseType': container.$enc(v.wheelbaseType, 'wheelbaseType'),
-        'roofHeightType': container.$enc(v.roofHeightType, 'roofHeightType'),
-        'drivetrain': container.$enc(v.drivetrain, 'drivetrain'),
-        'seats': container.$enc(v.seats, 'seats'),
-        'doors': container.$enc(v.doors, 'doors'),
-        'cylinders': container.$enc(v.cylinders, 'cylinders'),
-        'valves': container.$enc(v.valves, 'valves'),
-        'engineTorqueNM': container.$enc(v.engineTorqueNM, 'engineTorqueNM'),
-        'co2EmissionGPKM': container.$enc(v.co2EmissionGPKM, 'co2EmissionGPKM'),
-        'topSpeedMPH': container.$enc(v.topSpeedMPH, 'topSpeedMPH'),
-        'zeroToSixtyMPHSeconds':
-            container.$enc(v.zeroToSixtyMPHSeconds, 'zeroToSixtyMPHSeconds'),
-        'zeroToOneHundredKMPHSeconds': container.$enc(
-            v.zeroToOneHundredKMPHSeconds, 'zeroToOneHundredKMPHSeconds'),
-        'badgeEngineSizeLitres':
-            container.$enc(v.badgeEngineSizeLitres, 'badgeEngineSizeLitres'),
-        'engineCapacityCC':
-            container.$enc(v.engineCapacityCC, 'engineCapacityCC'),
-        'enginePowerBHP': container.$enc(v.enginePowerBHP, 'enginePowerBHP'),
-        'fuelCapacityLitres':
-            container.$enc(v.fuelCapacityLitres, 'fuelCapacityLitres'),
-        'emissionClass': container.$enc(v.emissionClass, 'emissionClass'),
-        'owners': container.$enc(v.owners, 'owners'),
-        'fuelEconomyNEDCExtraUrbanMPG': container.$enc(
-            v.fuelEconomyNEDCExtraUrbanMPG, 'fuelEconomyNEDCExtraUrbanMPG'),
-        'fuelEconomyNEDCUrbanMPG': container.$enc(
-            v.fuelEconomyNEDCUrbanMPG, 'fuelEconomyNEDCUrbanMPG'),
-        'fuelEconomyNEDCCombinedMPG': container.$enc(
-            v.fuelEconomyNEDCCombinedMPG, 'fuelEconomyNEDCCombinedMPG'),
-        'fuelEconomyWLTPLowMPG':
-            container.$enc(v.fuelEconomyWLTPLowMPG, 'fuelEconomyWLTPLowMPG'),
-        'fuelEconomyWLTPMediumMPG': container.$enc(
-            v.fuelEconomyWLTPMediumMPG, 'fuelEconomyWLTPMediumMPG'),
-        'fuelEconomyWLTPHighMPG':
-            container.$enc(v.fuelEconomyWLTPHighMPG, 'fuelEconomyWLTPHighMPG'),
-        'fuelEconomyWLTPExtraHighMPG': container.$enc(
-            v.fuelEconomyWLTPExtraHighMPG, 'fuelEconomyWLTPExtraHighMPG'),
-        'fuelEconomyWLTPCombinedMPG': container.$enc(
-            v.fuelEconomyWLTPCombinedMPG, 'fuelEconomyWLTPCombinedMPG'),
-        'bootSpaceSeatsUpLitres':
-            container.$enc(v.bootSpaceSeatsUpLitres, 'bootSpaceSeatsUpLitres'),
-        'insuranceGroup': container.$enc(v.insuranceGroup, 'insuranceGroup'),
-        'insuranceSecurityCode':
-            container.$enc(v.insuranceSecurityCode, 'insuranceSecurityCode'),
-        'firstRegistrationDate':
-            container.$enc(v.firstRegistrationDate, 'firstRegistrationDate'),
-        'colour': container.$enc(v.colour, 'colour'),
-        'style': container.$enc(v.style, 'style'),
-        'subStyle': container.$enc(v.subStyle, 'subStyle'),
-        'lengthMM': container.$enc(v.lengthMM, 'lengthMM'),
-        'heightMM': container.$enc(v.heightMM, 'heightMM'),
-        'widthMM': container.$enc(v.widthMM, 'widthMM'),
-        'payloadLengthMM': container.$enc(v.payloadLengthMM, 'payloadLengthMM'),
-        'payloadWidthMM': container.$enc(v.payloadWidthMM, 'payloadWidthMM'),
-        'payloadHeightMM': container.$enc(v.payloadHeightMM, 'payloadHeightMM'),
-        'payloadWeightKG': container.$enc(v.payloadWeightKG, 'payloadWeightKG'),
-        'minimumKerbWeightKG':
-            container.$enc(v.minimumKerbWeightKG, 'minimumKerbWeightKG'),
-        'grossVehicleWeightKG':
-            container.$enc(v.grossVehicleWeightKG, 'grossVehicleWeightKG'),
-        'engineNumber': container.$enc(v.engineNumber, 'engineNumber'),
-        'fuelDelivery': container.$enc(v.fuelDelivery, 'fuelDelivery'),
-        'gears': container.$enc(v.gears, 'gears'),
-        'startStop': container.$enc(v.startStop, 'startStop'),
-        'enginePowerPS': container.$enc(v.enginePowerPS, 'enginePowerPS'),
-        'engineTorqueLBFT':
-            container.$enc(v.engineTorqueLBFT, 'engineTorqueLBFT'),
-        'bootSpaceSeatsDownLitres': container.$enc(
-            v.bootSpaceSeatsDownLitres, 'bootSpaceSeatsDownLitres'),
-        'batteryChargeTime':
-            container.$enc(v.batteryChargeTime, 'batteryChargeTime'),
-        'batteryQuickChargeTime':
-            container.$enc(v.batteryQuickChargeTime, 'batteryQuickChargeTime'),
-        'batteryRangeMiles':
-            container.$enc(v.batteryRangeMiles, 'batteryRangeMiles'),
-        'batteryCapacityKWH':
-            container.$enc(v.batteryCapacityKWH, 'batteryCapacityKWH'),
-        'batteryUsableCapacityKWH': container.$enc(
-            v.batteryUsableCapacityKWH, 'batteryUsableCapacityKWH'),
-        'wheelbaseMM': container.$enc(v.wheelbaseMM, 'wheelbaseMM'),
-        'grossCombinedWeightKG':
-            container.$enc(v.grossCombinedWeightKG, 'grossCombinedWeightKG'),
-        'grossTrainWeightKG':
-            container.$enc(v.grossTrainWeightKG, 'grossTrainWeightKG'),
-        'boreMM': container.$enc(v.boreMM, 'boreMM'),
-        'strokeMM': container.$enc(v.strokeMM, 'strokeMM'),
-        'cylinderArrangement':
-            container.$enc(v.cylinderArrangement, 'cylinderArrangement'),
-        'engineMake': container.$enc(v.engineMake, 'engineMake'),
-        'valveGear': container.$enc(v.valveGear, 'valveGear'),
-        'axles': container.$enc(v.axles, 'axles'),
-        'countryOfOrigin': container.$enc(v.countryOfOrigin, 'countryOfOrigin'),
-        'driveType': container.$enc(v.driveType, 'driveType'),
-        'payloadVolumeCubicMetres': container.$enc(
-            v.payloadVolumeCubicMetres, 'payloadVolumeCubicMetres'),
-        'rde2Compliant': container.$enc(v.rde2Compliant, 'rde2Compliant'),
-        'sector': container.$enc(v.sector, 'sector'),
-        'oem': container.$enc(v.oem, 'oem')
-      };
+  final Function instantiate = _instantiate;
 
-  @override
-  String stringify(Vehicle self) =>
-      'Vehicle(ownershipCondition: ${container.asString(self.ownershipCondition)}, registration: ${container.asString(self.registration)}, vin: ${container.asString(self.vin)}, make: ${container.asString(self.make)}, model: ${container.asString(self.model)}, generation: ${container.asString(self.generation)}, derivative: ${container.asString(self.derivative)}, derivativeId: ${container.asString(self.derivativeId)}, vehicleType: ${container.asString(self.vehicleType)}, trim: ${container.asString(self.trim)}, bodyType: ${container.asString(self.bodyType)}, fuelType: ${container.asString(self.fuelType)}, cabType: ${container.asString(self.cabType)}, transmissionType: ${container.asString(self.transmissionType)}, wheelbaseType: ${container.asString(self.wheelbaseType)}, roofHeightType: ${container.asString(self.roofHeightType)}, drivetrain: ${container.asString(self.drivetrain)}, seats: ${container.asString(self.seats)}, doors: ${container.asString(self.doors)}, cylinders: ${container.asString(self.cylinders)}, valves: ${container.asString(self.valves)}, engineTorqueNM: ${container.asString(self.engineTorqueNM)}, co2EmissionGPKM: ${container.asString(self.co2EmissionGPKM)}, topSpeedMPH: ${container.asString(self.topSpeedMPH)}, zeroToSixtyMPHSeconds: ${container.asString(self.zeroToSixtyMPHSeconds)}, zeroToOneHundredKMPHSeconds: ${container.asString(self.zeroToOneHundredKMPHSeconds)}, badgeEngineSizeLitres: ${container.asString(self.badgeEngineSizeLitres)}, engineCapacityCC: ${container.asString(self.engineCapacityCC)}, enginePowerBHP: ${container.asString(self.enginePowerBHP)}, fuelCapacityLitres: ${container.asString(self.fuelCapacityLitres)}, emissionClass: ${container.asString(self.emissionClass)}, owners: ${container.asString(self.owners)}, fuelEconomyNEDCExtraUrbanMPG: ${container.asString(self.fuelEconomyNEDCExtraUrbanMPG)}, fuelEconomyNEDCUrbanMPG: ${container.asString(self.fuelEconomyNEDCUrbanMPG)}, fuelEconomyNEDCCombinedMPG: ${container.asString(self.fuelEconomyNEDCCombinedMPG)}, fuelEconomyWLTPLowMPG: ${container.asString(self.fuelEconomyWLTPLowMPG)}, fuelEconomyWLTPMediumMPG: ${container.asString(self.fuelEconomyWLTPMediumMPG)}, fuelEconomyWLTPHighMPG: ${container.asString(self.fuelEconomyWLTPHighMPG)}, fuelEconomyWLTPExtraHighMPG: ${container.asString(self.fuelEconomyWLTPExtraHighMPG)}, fuelEconomyWLTPCombinedMPG: ${container.asString(self.fuelEconomyWLTPCombinedMPG)}, bootSpaceSeatsUpLitres: ${container.asString(self.bootSpaceSeatsUpLitres)}, insuranceGroup: ${container.asString(self.insuranceGroup)}, insuranceSecurityCode: ${container.asString(self.insuranceSecurityCode)}, firstRegistrationDate: ${container.asString(self.firstRegistrationDate)}, colour: ${container.asString(self.colour)}, style: ${container.asString(self.style)}, subStyle: ${container.asString(self.subStyle)}, lengthMM: ${container.asString(self.lengthMM)}, heightMM: ${container.asString(self.heightMM)}, widthMM: ${container.asString(self.widthMM)}, payloadLengthMM: ${container.asString(self.payloadLengthMM)}, payloadWidthMM: ${container.asString(self.payloadWidthMM)}, payloadHeightMM: ${container.asString(self.payloadHeightMM)}, payloadWeightKG: ${container.asString(self.payloadWeightKG)}, minimumKerbWeightKG: ${container.asString(self.minimumKerbWeightKG)}, grossVehicleWeightKG: ${container.asString(self.grossVehicleWeightKG)}, engineNumber: ${container.asString(self.engineNumber)}, fuelDelivery: ${container.asString(self.fuelDelivery)}, gears: ${container.asString(self.gears)}, startStop: ${container.asString(self.startStop)}, enginePowerPS: ${container.asString(self.enginePowerPS)}, engineTorqueLBFT: ${container.asString(self.engineTorqueLBFT)}, bootSpaceSeatsDownLitres: ${container.asString(self.bootSpaceSeatsDownLitres)}, batteryChargeTime: ${container.asString(self.batteryChargeTime)}, batteryQuickChargeTime: ${container.asString(self.batteryQuickChargeTime)}, batteryRangeMiles: ${container.asString(self.batteryRangeMiles)}, batteryCapacityKWH: ${container.asString(self.batteryCapacityKWH)}, batteryUsableCapacityKWH: ${container.asString(self.batteryUsableCapacityKWH)}, wheelbaseMM: ${container.asString(self.wheelbaseMM)}, grossCombinedWeightKG: ${container.asString(self.grossCombinedWeightKG)}, grossTrainWeightKG: ${container.asString(self.grossTrainWeightKG)}, boreMM: ${container.asString(self.boreMM)}, strokeMM: ${container.asString(self.strokeMM)}, cylinderArrangement: ${container.asString(self.cylinderArrangement)}, engineMake: ${container.asString(self.engineMake)}, valveGear: ${container.asString(self.valveGear)}, axles: ${container.asString(self.axles)}, countryOfOrigin: ${container.asString(self.countryOfOrigin)}, driveType: ${container.asString(self.driveType)}, payloadVolumeCubicMetres: ${container.asString(self.payloadVolumeCubicMetres)}, rde2Compliant: ${container.asString(self.rde2Compliant)}, sector: ${container.asString(self.sector)}, oem: ${container.asString(self.oem)})';
-  @override
-  int hash(Vehicle self) =>
-      container.hash(self.ownershipCondition) ^
-      container.hash(self.registration) ^
-      container.hash(self.vin) ^
-      container.hash(self.make) ^
-      container.hash(self.model) ^
-      container.hash(self.generation) ^
-      container.hash(self.derivative) ^
-      container.hash(self.derivativeId) ^
-      container.hash(self.vehicleType) ^
-      container.hash(self.trim) ^
-      container.hash(self.bodyType) ^
-      container.hash(self.fuelType) ^
-      container.hash(self.cabType) ^
-      container.hash(self.transmissionType) ^
-      container.hash(self.wheelbaseType) ^
-      container.hash(self.roofHeightType) ^
-      container.hash(self.drivetrain) ^
-      container.hash(self.seats) ^
-      container.hash(self.doors) ^
-      container.hash(self.cylinders) ^
-      container.hash(self.valves) ^
-      container.hash(self.engineTorqueNM) ^
-      container.hash(self.co2EmissionGPKM) ^
-      container.hash(self.topSpeedMPH) ^
-      container.hash(self.zeroToSixtyMPHSeconds) ^
-      container.hash(self.zeroToOneHundredKMPHSeconds) ^
-      container.hash(self.badgeEngineSizeLitres) ^
-      container.hash(self.engineCapacityCC) ^
-      container.hash(self.enginePowerBHP) ^
-      container.hash(self.fuelCapacityLitres) ^
-      container.hash(self.emissionClass) ^
-      container.hash(self.owners) ^
-      container.hash(self.fuelEconomyNEDCExtraUrbanMPG) ^
-      container.hash(self.fuelEconomyNEDCUrbanMPG) ^
-      container.hash(self.fuelEconomyNEDCCombinedMPG) ^
-      container.hash(self.fuelEconomyWLTPLowMPG) ^
-      container.hash(self.fuelEconomyWLTPMediumMPG) ^
-      container.hash(self.fuelEconomyWLTPHighMPG) ^
-      container.hash(self.fuelEconomyWLTPExtraHighMPG) ^
-      container.hash(self.fuelEconomyWLTPCombinedMPG) ^
-      container.hash(self.bootSpaceSeatsUpLitres) ^
-      container.hash(self.insuranceGroup) ^
-      container.hash(self.insuranceSecurityCode) ^
-      container.hash(self.firstRegistrationDate) ^
-      container.hash(self.colour) ^
-      container.hash(self.style) ^
-      container.hash(self.subStyle) ^
-      container.hash(self.lengthMM) ^
-      container.hash(self.heightMM) ^
-      container.hash(self.widthMM) ^
-      container.hash(self.payloadLengthMM) ^
-      container.hash(self.payloadWidthMM) ^
-      container.hash(self.payloadHeightMM) ^
-      container.hash(self.payloadWeightKG) ^
-      container.hash(self.minimumKerbWeightKG) ^
-      container.hash(self.grossVehicleWeightKG) ^
-      container.hash(self.engineNumber) ^
-      container.hash(self.fuelDelivery) ^
-      container.hash(self.gears) ^
-      container.hash(self.startStop) ^
-      container.hash(self.enginePowerPS) ^
-      container.hash(self.engineTorqueLBFT) ^
-      container.hash(self.bootSpaceSeatsDownLitres) ^
-      container.hash(self.batteryChargeTime) ^
-      container.hash(self.batteryQuickChargeTime) ^
-      container.hash(self.batteryRangeMiles) ^
-      container.hash(self.batteryCapacityKWH) ^
-      container.hash(self.batteryUsableCapacityKWH) ^
-      container.hash(self.wheelbaseMM) ^
-      container.hash(self.grossCombinedWeightKG) ^
-      container.hash(self.grossTrainWeightKG) ^
-      container.hash(self.boreMM) ^
-      container.hash(self.strokeMM) ^
-      container.hash(self.cylinderArrangement) ^
-      container.hash(self.engineMake) ^
-      container.hash(self.valveGear) ^
-      container.hash(self.axles) ^
-      container.hash(self.countryOfOrigin) ^
-      container.hash(self.driveType) ^
-      container.hash(self.payloadVolumeCubicMetres) ^
-      container.hash(self.rde2Compliant) ^
-      container.hash(self.sector) ^
-      container.hash(self.oem);
-  @override
-  bool equals(Vehicle self, Vehicle other) =>
-      container.isEqual(self.ownershipCondition, other.ownershipCondition) &&
-      container.isEqual(self.registration, other.registration) &&
-      container.isEqual(self.vin, other.vin) &&
-      container.isEqual(self.make, other.make) &&
-      container.isEqual(self.model, other.model) &&
-      container.isEqual(self.generation, other.generation) &&
-      container.isEqual(self.derivative, other.derivative) &&
-      container.isEqual(self.derivativeId, other.derivativeId) &&
-      container.isEqual(self.vehicleType, other.vehicleType) &&
-      container.isEqual(self.trim, other.trim) &&
-      container.isEqual(self.bodyType, other.bodyType) &&
-      container.isEqual(self.fuelType, other.fuelType) &&
-      container.isEqual(self.cabType, other.cabType) &&
-      container.isEqual(self.transmissionType, other.transmissionType) &&
-      container.isEqual(self.wheelbaseType, other.wheelbaseType) &&
-      container.isEqual(self.roofHeightType, other.roofHeightType) &&
-      container.isEqual(self.drivetrain, other.drivetrain) &&
-      container.isEqual(self.seats, other.seats) &&
-      container.isEqual(self.doors, other.doors) &&
-      container.isEqual(self.cylinders, other.cylinders) &&
-      container.isEqual(self.valves, other.valves) &&
-      container.isEqual(self.engineTorqueNM, other.engineTorqueNM) &&
-      container.isEqual(self.co2EmissionGPKM, other.co2EmissionGPKM) &&
-      container.isEqual(self.topSpeedMPH, other.topSpeedMPH) &&
-      container.isEqual(
-          self.zeroToSixtyMPHSeconds, other.zeroToSixtyMPHSeconds) &&
-      container.isEqual(self.zeroToOneHundredKMPHSeconds,
-          other.zeroToOneHundredKMPHSeconds) &&
-      container.isEqual(
-          self.badgeEngineSizeLitres, other.badgeEngineSizeLitres) &&
-      container.isEqual(self.engineCapacityCC, other.engineCapacityCC) &&
-      container.isEqual(self.enginePowerBHP, other.enginePowerBHP) &&
-      container.isEqual(self.fuelCapacityLitres, other.fuelCapacityLitres) &&
-      container.isEqual(self.emissionClass, other.emissionClass) &&
-      container.isEqual(self.owners, other.owners) &&
-      container.isEqual(self.fuelEconomyNEDCExtraUrbanMPG,
-          other.fuelEconomyNEDCExtraUrbanMPG) &&
-      container.isEqual(
-          self.fuelEconomyNEDCUrbanMPG, other.fuelEconomyNEDCUrbanMPG) &&
-      container.isEqual(
-          self.fuelEconomyNEDCCombinedMPG, other.fuelEconomyNEDCCombinedMPG) &&
-      container.isEqual(
-          self.fuelEconomyWLTPLowMPG, other.fuelEconomyWLTPLowMPG) &&
-      container.isEqual(
-          self.fuelEconomyWLTPMediumMPG, other.fuelEconomyWLTPMediumMPG) &&
-      container.isEqual(
-          self.fuelEconomyWLTPHighMPG, other.fuelEconomyWLTPHighMPG) &&
-      container.isEqual(self.fuelEconomyWLTPExtraHighMPG,
-          other.fuelEconomyWLTPExtraHighMPG) &&
-      container.isEqual(
-          self.fuelEconomyWLTPCombinedMPG, other.fuelEconomyWLTPCombinedMPG) &&
-      container.isEqual(
-          self.bootSpaceSeatsUpLitres, other.bootSpaceSeatsUpLitres) &&
-      container.isEqual(self.insuranceGroup, other.insuranceGroup) &&
-      container.isEqual(
-          self.insuranceSecurityCode, other.insuranceSecurityCode) &&
-      container.isEqual(
-          self.firstRegistrationDate, other.firstRegistrationDate) &&
-      container.isEqual(self.colour, other.colour) &&
-      container.isEqual(self.style, other.style) &&
-      container.isEqual(self.subStyle, other.subStyle) &&
-      container.isEqual(self.lengthMM, other.lengthMM) &&
-      container.isEqual(self.heightMM, other.heightMM) &&
-      container.isEqual(self.widthMM, other.widthMM) &&
-      container.isEqual(self.payloadLengthMM, other.payloadLengthMM) &&
-      container.isEqual(self.payloadWidthMM, other.payloadWidthMM) &&
-      container.isEqual(self.payloadHeightMM, other.payloadHeightMM) &&
-      container.isEqual(self.payloadWeightKG, other.payloadWeightKG) &&
-      container.isEqual(self.minimumKerbWeightKG, other.minimumKerbWeightKG) &&
-      container.isEqual(
-          self.grossVehicleWeightKG, other.grossVehicleWeightKG) &&
-      container.isEqual(self.engineNumber, other.engineNumber) &&
-      container.isEqual(self.fuelDelivery, other.fuelDelivery) &&
-      container.isEqual(self.gears, other.gears) &&
-      container.isEqual(self.startStop, other.startStop) &&
-      container.isEqual(self.enginePowerPS, other.enginePowerPS) &&
-      container.isEqual(self.engineTorqueLBFT, other.engineTorqueLBFT) &&
-      container.isEqual(
-          self.bootSpaceSeatsDownLitres, other.bootSpaceSeatsDownLitres) &&
-      container.isEqual(self.batteryChargeTime, other.batteryChargeTime) &&
-      container.isEqual(
-          self.batteryQuickChargeTime, other.batteryQuickChargeTime) &&
-      container.isEqual(self.batteryRangeMiles, other.batteryRangeMiles) &&
-      container.isEqual(self.batteryCapacityKWH, other.batteryCapacityKWH) &&
-      container.isEqual(
-          self.batteryUsableCapacityKWH, other.batteryUsableCapacityKWH) &&
-      container.isEqual(self.wheelbaseMM, other.wheelbaseMM) &&
-      container.isEqual(
-          self.grossCombinedWeightKG, other.grossCombinedWeightKG) &&
-      container.isEqual(self.grossTrainWeightKG, other.grossTrainWeightKG) &&
-      container.isEqual(self.boreMM, other.boreMM) &&
-      container.isEqual(self.strokeMM, other.strokeMM) &&
-      container.isEqual(self.cylinderArrangement, other.cylinderArrangement) &&
-      container.isEqual(self.engineMake, other.engineMake) &&
-      container.isEqual(self.valveGear, other.valveGear) &&
-      container.isEqual(self.axles, other.axles) &&
-      container.isEqual(self.countryOfOrigin, other.countryOfOrigin) &&
-      container.isEqual(self.driveType, other.driveType) &&
-      container.isEqual(
-          self.payloadVolumeCubicMetres, other.payloadVolumeCubicMetres) &&
-      container.isEqual(self.rde2Compliant, other.rde2Compliant) &&
-      container.isEqual(self.sector, other.sector) &&
-      container.isEqual(self.oem, other.oem);
+  static Vehicle fromMap(Map<String, dynamic> map) {
+    return ensureInitialized().decodeMap<Vehicle>(map);
+  }
+
+  static Vehicle fromJson(String json) {
+    return ensureInitialized().decodeJson<Vehicle>(json);
+  }
 }
 
 mixin VehicleMappable {
-  String toJson() => VehicleMapper.container.toJson(this as Vehicle);
-  Map<String, dynamic> toMap() =>
-      VehicleMapper.container.toMap(this as Vehicle);
+  String toJson() {
+    return VehicleMapper.ensureInitialized()
+        .encodeJson<Vehicle>(this as Vehicle);
+  }
+
+  Map<String, dynamic> toMap() {
+    return VehicleMapper.ensureInitialized()
+        .encodeMap<Vehicle>(this as Vehicle);
+  }
+
   VehicleCopyWith<Vehicle, Vehicle, Vehicle> get copyWith =>
       _VehicleCopyWithImpl(this as Vehicle, $identity, $identity);
   @override
-  String toString() => VehicleMapper.container.asString(this);
+  String toString() {
+    return VehicleMapper.ensureInitialized().stringifyValue(this as Vehicle);
+  }
+
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      (runtimeType == other.runtimeType &&
-          VehicleMapper.container.isEqual(this, other));
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (runtimeType == other.runtimeType &&
+            VehicleMapper.ensureInitialized()
+                .isValueEqual(this as Vehicle, other));
+  }
+
   @override
-  int get hashCode => VehicleMapper.container.hash(this);
+  int get hashCode {
+    return VehicleMapper.ensureInitialized().hashValue(this as Vehicle);
+  }
 }
 
-extension VehicleValueCopy<$R, $Out extends Vehicle>
-    on ObjectCopyWith<$R, Vehicle, $Out> {
-  VehicleCopyWith<$R, Vehicle, $Out> get asVehicle =>
-      base.as((v, t, t2) => _VehicleCopyWithImpl(v, t, t2));
+extension VehicleValueCopy<$R, $Out> on ObjectCopyWith<$R, Vehicle, $Out> {
+  VehicleCopyWith<$R, Vehicle, $Out> get $asVehicle =>
+      $base.as((v, t, t2) => _VehicleCopyWithImpl(v, t, t2));
 }
 
-typedef VehicleCopyWithBound = Vehicle;
-
-abstract class VehicleCopyWith<$R, $In extends Vehicle, $Out extends Vehicle>
-    implements ObjectCopyWith<$R, $In, $Out> {
-  VehicleCopyWith<$R2, $In, $Out2> chain<$R2, $Out2 extends Vehicle>(
-      Then<Vehicle, $Out2> t, Then<$Out2, $R2> t2);
+abstract class VehicleCopyWith<$R, $In extends Vehicle, $Out>
+    implements ClassCopyWith<$R, $In, $Out> {
   OemCopyWith<$R, Oem, Oem>? get oem;
   $R call(
       {String? ownershipCondition,
@@ -553,20 +597,20 @@ abstract class VehicleCopyWith<$R, $In extends Vehicle, $Out extends Vehicle>
       bool? rde2Compliant,
       String? sector,
       Oem? oem});
+  VehicleCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
 
-class _VehicleCopyWithImpl<$R, $Out extends Vehicle>
-    extends CopyWithBase<$R, Vehicle, $Out>
+class _VehicleCopyWithImpl<$R, $Out>
+    extends ClassCopyWithBase<$R, Vehicle, $Out>
     implements VehicleCopyWith<$R, Vehicle, $Out> {
   _VehicleCopyWithImpl(super.value, super.then, super.then2);
-  @override
-  VehicleCopyWith<$R2, Vehicle, $Out2> chain<$R2, $Out2 extends Vehicle>(
-          Then<Vehicle, $Out2> t, Then<$Out2, $R2> t2) =>
-      _VehicleCopyWithImpl($value, t, t2);
 
   @override
+  late final ClassMapperBase<Vehicle> $mapper =
+      VehicleMapper.ensureInitialized();
+  @override
   OemCopyWith<$R, Oem, Oem>? get oem =>
-      $value.oem?.copyWith.chain($identity, (v) => call(oem: v));
+      $value.oem?.copyWith.$chain((v) => call(oem: v));
   @override
   $R call(
           {Object? ownershipCondition = $none,
@@ -652,103 +696,226 @@ class _VehicleCopyWithImpl<$R, $Out extends Vehicle>
           Object? rde2Compliant = $none,
           Object? sector = $none,
           Object? oem = $none}) =>
-      $then(Vehicle(
-          ownershipCondition: or(ownershipCondition, $value.ownershipCondition),
-          registration: or(registration, $value.registration),
-          vin: or(vin, $value.vin),
-          make: or(make, $value.make),
-          model: or(model, $value.model),
-          generation: or(generation, $value.generation),
-          derivative: or(derivative, $value.derivative),
-          derivativeId: or(derivativeId, $value.derivativeId),
-          vehicleType: or(vehicleType, $value.vehicleType),
-          trim: or(trim, $value.trim),
-          bodyType: or(bodyType, $value.bodyType),
-          fuelType: or(fuelType, $value.fuelType),
-          cabType: or(cabType, $value.cabType),
-          transmissionType: or(transmissionType, $value.transmissionType),
-          wheelbaseType: or(wheelbaseType, $value.wheelbaseType),
-          roofHeightType: or(roofHeightType, $value.roofHeightType),
-          drivetrain: or(drivetrain, $value.drivetrain),
-          seats: or(seats, $value.seats),
-          doors: or(doors, $value.doors),
-          cylinders: or(cylinders, $value.cylinders),
-          valves: or(valves, $value.valves),
-          engineTorqueNM: or(engineTorqueNM, $value.engineTorqueNM),
-          co2EmissionGPKM: or(co2EmissionGPKM, $value.co2EmissionGPKM),
-          topSpeedMPH: or(topSpeedMPH, $value.topSpeedMPH),
-          zeroToSixtyMPHSeconds:
-              or(zeroToSixtyMPHSeconds, $value.zeroToSixtyMPHSeconds),
-          zeroToOneHundredKMPHSeconds: or(
-              zeroToOneHundredKMPHSeconds, $value.zeroToOneHundredKMPHSeconds),
-          badgeEngineSizeLitres:
-              or(badgeEngineSizeLitres, $value.badgeEngineSizeLitres),
-          engineCapacityCC: or(engineCapacityCC, $value.engineCapacityCC),
-          enginePowerBHP: or(enginePowerBHP, $value.enginePowerBHP),
-          fuelCapacityLitres: or(fuelCapacityLitres, $value.fuelCapacityLitres),
-          emissionClass: or(emissionClass, $value.emissionClass),
-          owners: or(owners, $value.owners),
-          fuelEconomyNEDCExtraUrbanMPG: or(fuelEconomyNEDCExtraUrbanMPG,
-              $value.fuelEconomyNEDCExtraUrbanMPG),
-          fuelEconomyNEDCUrbanMPG:
-              or(fuelEconomyNEDCUrbanMPG, $value.fuelEconomyNEDCUrbanMPG),
-          fuelEconomyNEDCCombinedMPG:
-              or(fuelEconomyNEDCCombinedMPG, $value.fuelEconomyNEDCCombinedMPG),
-          fuelEconomyWLTPLowMPG:
-              or(fuelEconomyWLTPLowMPG, $value.fuelEconomyWLTPLowMPG),
-          fuelEconomyWLTPMediumMPG:
-              or(fuelEconomyWLTPMediumMPG, $value.fuelEconomyWLTPMediumMPG),
-          fuelEconomyWLTPHighMPG:
-              or(fuelEconomyWLTPHighMPG, $value.fuelEconomyWLTPHighMPG),
-          fuelEconomyWLTPExtraHighMPG: or(
-              fuelEconomyWLTPExtraHighMPG, $value.fuelEconomyWLTPExtraHighMPG),
-          fuelEconomyWLTPCombinedMPG:
-              or(fuelEconomyWLTPCombinedMPG, $value.fuelEconomyWLTPCombinedMPG),
-          bootSpaceSeatsUpLitres:
-              or(bootSpaceSeatsUpLitres, $value.bootSpaceSeatsUpLitres),
-          insuranceGroup: or(insuranceGroup, $value.insuranceGroup),
-          insuranceSecurityCode:
-              or(insuranceSecurityCode, $value.insuranceSecurityCode),
-          firstRegistrationDate:
-              or(firstRegistrationDate, $value.firstRegistrationDate),
-          colour: or(colour, $value.colour),
-          style: or(style, $value.style),
-          subStyle: or(subStyle, $value.subStyle),
-          lengthMM: or(lengthMM, $value.lengthMM),
-          heightMM: or(heightMM, $value.heightMM),
-          widthMM: or(widthMM, $value.widthMM),
-          payloadLengthMM: or(payloadLengthMM, $value.payloadLengthMM),
-          payloadWidthMM: or(payloadWidthMM, $value.payloadWidthMM),
-          payloadHeightMM: or(payloadHeightMM, $value.payloadHeightMM),
-          payloadWeightKG: or(payloadWeightKG, $value.payloadWeightKG),
-          minimumKerbWeightKG:
-              or(minimumKerbWeightKG, $value.minimumKerbWeightKG),
-          grossVehicleWeightKG: or(grossVehicleWeightKG, $value.grossVehicleWeightKG),
-          engineNumber: or(engineNumber, $value.engineNumber),
-          fuelDelivery: or(fuelDelivery, $value.fuelDelivery),
-          gears: or(gears, $value.gears),
-          startStop: or(startStop, $value.startStop),
-          enginePowerPS: or(enginePowerPS, $value.enginePowerPS),
-          engineTorqueLBFT: or(engineTorqueLBFT, $value.engineTorqueLBFT),
-          bootSpaceSeatsDownLitres: or(bootSpaceSeatsDownLitres, $value.bootSpaceSeatsDownLitres),
-          batteryChargeTime: or(batteryChargeTime, $value.batteryChargeTime),
-          batteryQuickChargeTime: or(batteryQuickChargeTime, $value.batteryQuickChargeTime),
-          batteryRangeMiles: or(batteryRangeMiles, $value.batteryRangeMiles),
-          batteryCapacityKWH: or(batteryCapacityKWH, $value.batteryCapacityKWH),
-          batteryUsableCapacityKWH: or(batteryUsableCapacityKWH, $value.batteryUsableCapacityKWH),
-          wheelbaseMM: or(wheelbaseMM, $value.wheelbaseMM),
-          grossCombinedWeightKG: or(grossCombinedWeightKG, $value.grossCombinedWeightKG),
-          grossTrainWeightKG: or(grossTrainWeightKG, $value.grossTrainWeightKG),
-          boreMM: or(boreMM, $value.boreMM),
-          strokeMM: or(strokeMM, $value.strokeMM),
-          cylinderArrangement: or(cylinderArrangement, $value.cylinderArrangement),
-          engineMake: or(engineMake, $value.engineMake),
-          valveGear: or(valveGear, $value.valveGear),
-          axles: or(axles, $value.axles),
-          countryOfOrigin: or(countryOfOrigin, $value.countryOfOrigin),
-          driveType: or(driveType, $value.driveType),
-          payloadVolumeCubicMetres: or(payloadVolumeCubicMetres, $value.payloadVolumeCubicMetres),
-          rde2Compliant: or(rde2Compliant, $value.rde2Compliant),
-          sector: or(sector, $value.sector),
-          oem: or(oem, $value.oem)));
+      $apply(FieldCopyWithData({
+        if (ownershipCondition != $none)
+          #ownershipCondition: ownershipCondition,
+        if (registration != $none) #registration: registration,
+        if (vin != $none) #vin: vin,
+        if (make != $none) #make: make,
+        if (model != $none) #model: model,
+        if (generation != $none) #generation: generation,
+        if (derivative != $none) #derivative: derivative,
+        if (derivativeId != $none) #derivativeId: derivativeId,
+        if (vehicleType != $none) #vehicleType: vehicleType,
+        if (trim != $none) #trim: trim,
+        if (bodyType != $none) #bodyType: bodyType,
+        if (fuelType != $none) #fuelType: fuelType,
+        if (cabType != $none) #cabType: cabType,
+        if (transmissionType != $none) #transmissionType: transmissionType,
+        if (wheelbaseType != $none) #wheelbaseType: wheelbaseType,
+        if (roofHeightType != $none) #roofHeightType: roofHeightType,
+        if (drivetrain != $none) #drivetrain: drivetrain,
+        if (seats != $none) #seats: seats,
+        if (doors != $none) #doors: doors,
+        if (cylinders != $none) #cylinders: cylinders,
+        if (valves != $none) #valves: valves,
+        if (engineTorqueNM != $none) #engineTorqueNM: engineTorqueNM,
+        if (co2EmissionGPKM != $none) #co2EmissionGPKM: co2EmissionGPKM,
+        if (topSpeedMPH != $none) #topSpeedMPH: topSpeedMPH,
+        if (zeroToSixtyMPHSeconds != $none)
+          #zeroToSixtyMPHSeconds: zeroToSixtyMPHSeconds,
+        if (zeroToOneHundredKMPHSeconds != $none)
+          #zeroToOneHundredKMPHSeconds: zeroToOneHundredKMPHSeconds,
+        if (badgeEngineSizeLitres != $none)
+          #badgeEngineSizeLitres: badgeEngineSizeLitres,
+        if (engineCapacityCC != $none) #engineCapacityCC: engineCapacityCC,
+        if (enginePowerBHP != $none) #enginePowerBHP: enginePowerBHP,
+        if (fuelCapacityLitres != $none)
+          #fuelCapacityLitres: fuelCapacityLitres,
+        if (emissionClass != $none) #emissionClass: emissionClass,
+        if (owners != $none) #owners: owners,
+        if (fuelEconomyNEDCExtraUrbanMPG != $none)
+          #fuelEconomyNEDCExtraUrbanMPG: fuelEconomyNEDCExtraUrbanMPG,
+        if (fuelEconomyNEDCUrbanMPG != $none)
+          #fuelEconomyNEDCUrbanMPG: fuelEconomyNEDCUrbanMPG,
+        if (fuelEconomyNEDCCombinedMPG != $none)
+          #fuelEconomyNEDCCombinedMPG: fuelEconomyNEDCCombinedMPG,
+        if (fuelEconomyWLTPLowMPG != $none)
+          #fuelEconomyWLTPLowMPG: fuelEconomyWLTPLowMPG,
+        if (fuelEconomyWLTPMediumMPG != $none)
+          #fuelEconomyWLTPMediumMPG: fuelEconomyWLTPMediumMPG,
+        if (fuelEconomyWLTPHighMPG != $none)
+          #fuelEconomyWLTPHighMPG: fuelEconomyWLTPHighMPG,
+        if (fuelEconomyWLTPExtraHighMPG != $none)
+          #fuelEconomyWLTPExtraHighMPG: fuelEconomyWLTPExtraHighMPG,
+        if (fuelEconomyWLTPCombinedMPG != $none)
+          #fuelEconomyWLTPCombinedMPG: fuelEconomyWLTPCombinedMPG,
+        if (bootSpaceSeatsUpLitres != $none)
+          #bootSpaceSeatsUpLitres: bootSpaceSeatsUpLitres,
+        if (insuranceGroup != $none) #insuranceGroup: insuranceGroup,
+        if (insuranceSecurityCode != $none)
+          #insuranceSecurityCode: insuranceSecurityCode,
+        if (firstRegistrationDate != $none)
+          #firstRegistrationDate: firstRegistrationDate,
+        if (colour != $none) #colour: colour,
+        if (style != $none) #style: style,
+        if (subStyle != $none) #subStyle: subStyle,
+        if (lengthMM != $none) #lengthMM: lengthMM,
+        if (heightMM != $none) #heightMM: heightMM,
+        if (widthMM != $none) #widthMM: widthMM,
+        if (payloadLengthMM != $none) #payloadLengthMM: payloadLengthMM,
+        if (payloadWidthMM != $none) #payloadWidthMM: payloadWidthMM,
+        if (payloadHeightMM != $none) #payloadHeightMM: payloadHeightMM,
+        if (payloadWeightKG != $none) #payloadWeightKG: payloadWeightKG,
+        if (minimumKerbWeightKG != $none)
+          #minimumKerbWeightKG: minimumKerbWeightKG,
+        if (grossVehicleWeightKG != $none)
+          #grossVehicleWeightKG: grossVehicleWeightKG,
+        if (engineNumber != $none) #engineNumber: engineNumber,
+        if (fuelDelivery != $none) #fuelDelivery: fuelDelivery,
+        if (gears != $none) #gears: gears,
+        if (startStop != $none) #startStop: startStop,
+        if (enginePowerPS != $none) #enginePowerPS: enginePowerPS,
+        if (engineTorqueLBFT != $none) #engineTorqueLBFT: engineTorqueLBFT,
+        if (bootSpaceSeatsDownLitres != $none)
+          #bootSpaceSeatsDownLitres: bootSpaceSeatsDownLitres,
+        if (batteryChargeTime != $none) #batteryChargeTime: batteryChargeTime,
+        if (batteryQuickChargeTime != $none)
+          #batteryQuickChargeTime: batteryQuickChargeTime,
+        if (batteryRangeMiles != $none) #batteryRangeMiles: batteryRangeMiles,
+        if (batteryCapacityKWH != $none)
+          #batteryCapacityKWH: batteryCapacityKWH,
+        if (batteryUsableCapacityKWH != $none)
+          #batteryUsableCapacityKWH: batteryUsableCapacityKWH,
+        if (wheelbaseMM != $none) #wheelbaseMM: wheelbaseMM,
+        if (grossCombinedWeightKG != $none)
+          #grossCombinedWeightKG: grossCombinedWeightKG,
+        if (grossTrainWeightKG != $none)
+          #grossTrainWeightKG: grossTrainWeightKG,
+        if (boreMM != $none) #boreMM: boreMM,
+        if (strokeMM != $none) #strokeMM: strokeMM,
+        if (cylinderArrangement != $none)
+          #cylinderArrangement: cylinderArrangement,
+        if (engineMake != $none) #engineMake: engineMake,
+        if (valveGear != $none) #valveGear: valveGear,
+        if (axles != $none) #axles: axles,
+        if (countryOfOrigin != $none) #countryOfOrigin: countryOfOrigin,
+        if (driveType != $none) #driveType: driveType,
+        if (payloadVolumeCubicMetres != $none)
+          #payloadVolumeCubicMetres: payloadVolumeCubicMetres,
+        if (rde2Compliant != $none) #rde2Compliant: rde2Compliant,
+        if (sector != $none) #sector: sector,
+        if (oem != $none) #oem: oem
+      }));
+  @override
+  Vehicle $make(CopyWithData data) => Vehicle(
+      ownershipCondition:
+          data.get(#ownershipCondition, or: $value.ownershipCondition),
+      registration: data.get(#registration, or: $value.registration),
+      vin: data.get(#vin, or: $value.vin),
+      make: data.get(#make, or: $value.make),
+      model: data.get(#model, or: $value.model),
+      generation: data.get(#generation, or: $value.generation),
+      derivative: data.get(#derivative, or: $value.derivative),
+      derivativeId: data.get(#derivativeId, or: $value.derivativeId),
+      vehicleType: data.get(#vehicleType, or: $value.vehicleType),
+      trim: data.get(#trim, or: $value.trim),
+      bodyType: data.get(#bodyType, or: $value.bodyType),
+      fuelType: data.get(#fuelType, or: $value.fuelType),
+      cabType: data.get(#cabType, or: $value.cabType),
+      transmissionType:
+          data.get(#transmissionType, or: $value.transmissionType),
+      wheelbaseType: data.get(#wheelbaseType, or: $value.wheelbaseType),
+      roofHeightType: data.get(#roofHeightType, or: $value.roofHeightType),
+      drivetrain: data.get(#drivetrain, or: $value.drivetrain),
+      seats: data.get(#seats, or: $value.seats),
+      doors: data.get(#doors, or: $value.doors),
+      cylinders: data.get(#cylinders, or: $value.cylinders),
+      valves: data.get(#valves, or: $value.valves),
+      engineTorqueNM: data.get(#engineTorqueNM, or: $value.engineTorqueNM),
+      co2EmissionGPKM: data.get(#co2EmissionGPKM, or: $value.co2EmissionGPKM),
+      topSpeedMPH: data.get(#topSpeedMPH, or: $value.topSpeedMPH),
+      zeroToSixtyMPHSeconds:
+          data.get(#zeroToSixtyMPHSeconds, or: $value.zeroToSixtyMPHSeconds),
+      zeroToOneHundredKMPHSeconds: data.get(#zeroToOneHundredKMPHSeconds,
+          or: $value.zeroToOneHundredKMPHSeconds),
+      badgeEngineSizeLitres:
+          data.get(#badgeEngineSizeLitres, or: $value.badgeEngineSizeLitres),
+      engineCapacityCC:
+          data.get(#engineCapacityCC, or: $value.engineCapacityCC),
+      enginePowerBHP: data.get(#enginePowerBHP, or: $value.enginePowerBHP),
+      fuelCapacityLitres:
+          data.get(#fuelCapacityLitres, or: $value.fuelCapacityLitres),
+      emissionClass: data.get(#emissionClass, or: $value.emissionClass),
+      owners: data.get(#owners, or: $value.owners),
+      fuelEconomyNEDCExtraUrbanMPG: data.get(#fuelEconomyNEDCExtraUrbanMPG,
+          or: $value.fuelEconomyNEDCExtraUrbanMPG),
+      fuelEconomyNEDCUrbanMPG: data.get(#fuelEconomyNEDCUrbanMPG,
+          or: $value.fuelEconomyNEDCUrbanMPG),
+      fuelEconomyNEDCCombinedMPG: data.get(#fuelEconomyNEDCCombinedMPG,
+          or: $value.fuelEconomyNEDCCombinedMPG),
+      fuelEconomyWLTPLowMPG:
+          data.get(#fuelEconomyWLTPLowMPG, or: $value.fuelEconomyWLTPLowMPG),
+      fuelEconomyWLTPMediumMPG: data.get(#fuelEconomyWLTPMediumMPG,
+          or: $value.fuelEconomyWLTPMediumMPG),
+      fuelEconomyWLTPHighMPG:
+          data.get(#fuelEconomyWLTPHighMPG, or: $value.fuelEconomyWLTPHighMPG),
+      fuelEconomyWLTPExtraHighMPG: data.get(#fuelEconomyWLTPExtraHighMPG,
+          or: $value.fuelEconomyWLTPExtraHighMPG),
+      fuelEconomyWLTPCombinedMPG: data.get(#fuelEconomyWLTPCombinedMPG,
+          or: $value.fuelEconomyWLTPCombinedMPG),
+      bootSpaceSeatsUpLitres:
+          data.get(#bootSpaceSeatsUpLitres, or: $value.bootSpaceSeatsUpLitres),
+      insuranceGroup: data.get(#insuranceGroup, or: $value.insuranceGroup),
+      insuranceSecurityCode:
+          data.get(#insuranceSecurityCode, or: $value.insuranceSecurityCode),
+      firstRegistrationDate:
+          data.get(#firstRegistrationDate, or: $value.firstRegistrationDate),
+      colour: data.get(#colour, or: $value.colour),
+      style: data.get(#style, or: $value.style),
+      subStyle: data.get(#subStyle, or: $value.subStyle),
+      lengthMM: data.get(#lengthMM, or: $value.lengthMM),
+      heightMM: data.get(#heightMM, or: $value.heightMM),
+      widthMM: data.get(#widthMM, or: $value.widthMM),
+      payloadLengthMM: data.get(#payloadLengthMM, or: $value.payloadLengthMM),
+      payloadWidthMM: data.get(#payloadWidthMM, or: $value.payloadWidthMM),
+      payloadHeightMM: data.get(#payloadHeightMM, or: $value.payloadHeightMM),
+      payloadWeightKG: data.get(#payloadWeightKG, or: $value.payloadWeightKG),
+      minimumKerbWeightKG:
+          data.get(#minimumKerbWeightKG, or: $value.minimumKerbWeightKG),
+      grossVehicleWeightKG:
+          data.get(#grossVehicleWeightKG, or: $value.grossVehicleWeightKG),
+      engineNumber: data.get(#engineNumber, or: $value.engineNumber),
+      fuelDelivery: data.get(#fuelDelivery, or: $value.fuelDelivery),
+      gears: data.get(#gears, or: $value.gears),
+      startStop: data.get(#startStop, or: $value.startStop),
+      enginePowerPS: data.get(#enginePowerPS, or: $value.enginePowerPS),
+      engineTorqueLBFT:
+          data.get(#engineTorqueLBFT, or: $value.engineTorqueLBFT),
+      bootSpaceSeatsDownLitres:
+          data.get(#bootSpaceSeatsDownLitres, or: $value.bootSpaceSeatsDownLitres),
+      batteryChargeTime: data.get(#batteryChargeTime, or: $value.batteryChargeTime),
+      batteryQuickChargeTime: data.get(#batteryQuickChargeTime, or: $value.batteryQuickChargeTime),
+      batteryRangeMiles: data.get(#batteryRangeMiles, or: $value.batteryRangeMiles),
+      batteryCapacityKWH: data.get(#batteryCapacityKWH, or: $value.batteryCapacityKWH),
+      batteryUsableCapacityKWH: data.get(#batteryUsableCapacityKWH, or: $value.batteryUsableCapacityKWH),
+      wheelbaseMM: data.get(#wheelbaseMM, or: $value.wheelbaseMM),
+      grossCombinedWeightKG: data.get(#grossCombinedWeightKG, or: $value.grossCombinedWeightKG),
+      grossTrainWeightKG: data.get(#grossTrainWeightKG, or: $value.grossTrainWeightKG),
+      boreMM: data.get(#boreMM, or: $value.boreMM),
+      strokeMM: data.get(#strokeMM, or: $value.strokeMM),
+      cylinderArrangement: data.get(#cylinderArrangement, or: $value.cylinderArrangement),
+      engineMake: data.get(#engineMake, or: $value.engineMake),
+      valveGear: data.get(#valveGear, or: $value.valveGear),
+      axles: data.get(#axles, or: $value.axles),
+      countryOfOrigin: data.get(#countryOfOrigin, or: $value.countryOfOrigin),
+      driveType: data.get(#driveType, or: $value.driveType),
+      payloadVolumeCubicMetres: data.get(#payloadVolumeCubicMetres, or: $value.payloadVolumeCubicMetres),
+      rde2Compliant: data.get(#rde2Compliant, or: $value.rde2Compliant),
+      sector: data.get(#sector, or: $value.sector),
+      oem: data.get(#oem, or: $value.oem));
+
+  @override
+  VehicleCopyWith<$R2, Vehicle, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t) =>
+      _VehicleCopyWithImpl($value, $cast, t);
 }

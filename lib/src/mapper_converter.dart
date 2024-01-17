@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:chopper/chopper.dart';
-import 'package:dart_autotrader/dart_autotrader.container.dart';
+import 'package:dart_mappable/dart_mappable.dart';
 
 /// Converts response bodies to the appropriate type
 class MapperConverter implements Converter {
@@ -16,7 +16,7 @@ class MapperConverter implements Converter {
   ) {
     try {
       return response.copyWith(
-        body: dartAutotraderContainer.fromJson<BodyType>(response.bodyString),
+        body: MapperContainer.globals.fromJson<BodyType>(response.bodyString),
       );
     } catch (e) {
       return response.copyWith(body: null, bodyError: e);

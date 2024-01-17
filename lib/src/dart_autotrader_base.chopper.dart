@@ -6,15 +6,16 @@ part of 'dart_autotrader_base.dart';
 // ChopperGenerator
 // **************************************************************************
 
-// ignore_for_file: always_put_control_body_on_new_line, always_specify_types, prefer_const_declarations, unnecessary_brace_in_string_interps
-class _$Autotrader extends Autotrader {
+// coverage:ignore-file
+// ignore_for_file: type=lint
+final class _$Autotrader extends Autotrader {
   _$Autotrader([ChopperClient? client]) {
     if (client == null) return;
     this.client = client;
   }
 
   @override
-  final definitionType = Autotrader;
+  final Type definitionType = Autotrader;
 
   @override
   Future<Response<AuthenticateBody>> authenticate({

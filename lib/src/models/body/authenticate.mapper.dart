@@ -1,106 +1,124 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element
+// ignore_for_file: unused_element, unnecessary_cast
+// ignore_for_file: strict_raw_type, inference_failure_on_untyped_parameter
 
 part of 'authenticate.dart';
 
-class AuthenticateBodyMapper extends MapperBase<AuthenticateBody> {
-  static MapperContainer container = MapperContainer(
-    mappers: {AuthenticateBodyMapper()},
-  );
+class AuthenticateBodyMapper extends ClassMapperBase<AuthenticateBody> {
+  AuthenticateBodyMapper._();
 
-  @override
-  AuthenticateBodyMapperElement createElement(MapperContainer container) {
-    return AuthenticateBodyMapperElement._(this, container);
+  static AuthenticateBodyMapper? _instance;
+  static AuthenticateBodyMapper ensureInitialized() {
+    if (_instance == null) {
+      MapperContainer.globals.use(_instance = AuthenticateBodyMapper._());
+    }
+    return _instance!;
   }
 
   @override
-  String get id => 'AuthenticateBody';
+  final String id = 'AuthenticateBody';
 
-  static final fromMap = container.fromMap<AuthenticateBody>;
-  static final fromJson = container.fromJson<AuthenticateBody>;
-}
-
-class AuthenticateBodyMapperElement
-    extends MapperElementBase<AuthenticateBody> {
-  AuthenticateBodyMapperElement._(super.mapper, super.container);
-
-  @override
-  Function get decoder => decode;
-  AuthenticateBody decode(dynamic v) =>
-      checkedType(v, (Map<String, dynamic> map) => fromMap(map));
-  AuthenticateBody fromMap(Map<String, dynamic> map) => AuthenticateBody(
-      accessToken: container.$get(map, 'access_token'),
-      expires: container.$get(map, 'expires'));
+  static String _$accessToken(AuthenticateBody v) => v.accessToken;
+  static const Field<AuthenticateBody, String> _f$accessToken =
+      Field('accessToken', _$accessToken, key: 'access_token');
+  static String _$expires(AuthenticateBody v) => v.expires;
+  static const Field<AuthenticateBody, String> _f$expires =
+      Field('expires', _$expires);
 
   @override
-  Function get encoder => encode;
-  dynamic encode(AuthenticateBody v) => toMap(v);
-  Map<String, dynamic> toMap(AuthenticateBody a) => {
-        'access_token': container.$enc(a.accessToken, 'accessToken'),
-        'expires': container.$enc(a.expires, 'expires')
-      };
+  final MappableFields<AuthenticateBody> fields = const {
+    #accessToken: _f$accessToken,
+    #expires: _f$expires,
+  };
+
+  static AuthenticateBody _instantiate(DecodingData data) {
+    return AuthenticateBody(
+        accessToken: data.dec(_f$accessToken), expires: data.dec(_f$expires));
+  }
 
   @override
-  String stringify(AuthenticateBody self) =>
-      'AuthenticateBody(accessToken: ${container.asString(self.accessToken)}, expires: ${container.asString(self.expires)})';
-  @override
-  int hash(AuthenticateBody self) =>
-      container.hash(self.accessToken) ^ container.hash(self.expires);
-  @override
-  bool equals(AuthenticateBody self, AuthenticateBody other) =>
-      container.isEqual(self.accessToken, other.accessToken) &&
-      container.isEqual(self.expires, other.expires);
+  final Function instantiate = _instantiate;
+
+  static AuthenticateBody fromMap(Map<String, dynamic> map) {
+    return ensureInitialized().decodeMap<AuthenticateBody>(map);
+  }
+
+  static AuthenticateBody fromJson(String json) {
+    return ensureInitialized().decodeJson<AuthenticateBody>(json);
+  }
 }
 
 mixin AuthenticateBodyMappable {
-  String toJson() =>
-      AuthenticateBodyMapper.container.toJson(this as AuthenticateBody);
-  Map<String, dynamic> toMap() =>
-      AuthenticateBodyMapper.container.toMap(this as AuthenticateBody);
+  String toJson() {
+    return AuthenticateBodyMapper.ensureInitialized()
+        .encodeJson<AuthenticateBody>(this as AuthenticateBody);
+  }
+
+  Map<String, dynamic> toMap() {
+    return AuthenticateBodyMapper.ensureInitialized()
+        .encodeMap<AuthenticateBody>(this as AuthenticateBody);
+  }
+
   AuthenticateBodyCopyWith<AuthenticateBody, AuthenticateBody, AuthenticateBody>
       get copyWith => _AuthenticateBodyCopyWithImpl(
           this as AuthenticateBody, $identity, $identity);
   @override
-  String toString() => AuthenticateBodyMapper.container.asString(this);
+  String toString() {
+    return AuthenticateBodyMapper.ensureInitialized()
+        .stringifyValue(this as AuthenticateBody);
+  }
+
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      (runtimeType == other.runtimeType &&
-          AuthenticateBodyMapper.container.isEqual(this, other));
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (runtimeType == other.runtimeType &&
+            AuthenticateBodyMapper.ensureInitialized()
+                .isValueEqual(this as AuthenticateBody, other));
+  }
+
   @override
-  int get hashCode => AuthenticateBodyMapper.container.hash(this);
+  int get hashCode {
+    return AuthenticateBodyMapper.ensureInitialized()
+        .hashValue(this as AuthenticateBody);
+  }
 }
 
-extension AuthenticateBodyValueCopy<$R, $Out extends AuthenticateBody>
+extension AuthenticateBodyValueCopy<$R, $Out>
     on ObjectCopyWith<$R, AuthenticateBody, $Out> {
-  AuthenticateBodyCopyWith<$R, AuthenticateBody, $Out> get asAuthenticateBody =>
-      base.as((v, t, t2) => _AuthenticateBodyCopyWithImpl(v, t, t2));
+  AuthenticateBodyCopyWith<$R, AuthenticateBody, $Out>
+      get $asAuthenticateBody =>
+          $base.as((v, t, t2) => _AuthenticateBodyCopyWithImpl(v, t, t2));
 }
 
-typedef AuthenticateBodyCopyWithBound = AuthenticateBody;
-
-abstract class AuthenticateBodyCopyWith<$R, $In extends AuthenticateBody,
-    $Out extends AuthenticateBody> implements ObjectCopyWith<$R, $In, $Out> {
-  AuthenticateBodyCopyWith<$R2, $In, $Out2>
-      chain<$R2, $Out2 extends AuthenticateBody>(
-          Then<AuthenticateBody, $Out2> t, Then<$Out2, $R2> t2);
+abstract class AuthenticateBodyCopyWith<$R, $In extends AuthenticateBody, $Out>
+    implements ClassCopyWith<$R, $In, $Out> {
   $R call({String? accessToken, String? expires});
+  AuthenticateBodyCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(
+      Then<$Out2, $R2> t);
 }
 
-class _AuthenticateBodyCopyWithImpl<$R, $Out extends AuthenticateBody>
-    extends CopyWithBase<$R, AuthenticateBody, $Out>
+class _AuthenticateBodyCopyWithImpl<$R, $Out>
+    extends ClassCopyWithBase<$R, AuthenticateBody, $Out>
     implements AuthenticateBodyCopyWith<$R, AuthenticateBody, $Out> {
   _AuthenticateBodyCopyWithImpl(super.value, super.then, super.then2);
-  @override
-  AuthenticateBodyCopyWith<$R2, AuthenticateBody, $Out2>
-      chain<$R2, $Out2 extends AuthenticateBody>(
-              Then<AuthenticateBody, $Out2> t, Then<$Out2, $R2> t2) =>
-          _AuthenticateBodyCopyWithImpl($value, t, t2);
 
   @override
-  $R call({String? accessToken, String? expires}) => $then(AuthenticateBody(
-      accessToken: accessToken ?? $value.accessToken,
-      expires: expires ?? $value.expires));
+  late final ClassMapperBase<AuthenticateBody> $mapper =
+      AuthenticateBodyMapper.ensureInitialized();
+  @override
+  $R call({String? accessToken, String? expires}) => $apply(FieldCopyWithData({
+        if (accessToken != null) #accessToken: accessToken,
+        if (expires != null) #expires: expires
+      }));
+  @override
+  AuthenticateBody $make(CopyWithData data) => AuthenticateBody(
+      accessToken: data.get(#accessToken, or: $value.accessToken),
+      expires: data.get(#expires, or: $value.expires));
+
+  @override
+  AuthenticateBodyCopyWith<$R2, AuthenticateBody, $Out2> $chain<$R2, $Out2>(
+          Then<$Out2, $R2> t) =>
+      _AuthenticateBodyCopyWithImpl($value, $cast, t);
 }

@@ -1,119 +1,138 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element
+// ignore_for_file: unused_element, unnecessary_cast
+// ignore_for_file: strict_raw_type, inference_failure_on_untyped_parameter
 
 part of 'vehicle_valuation.dart';
 
-class VehicleValuationBodyMapper extends MapperBase<VehicleValuationBody> {
-  static MapperContainer container = MapperContainer(
-    mappers: {VehicleValuationBodyMapper()},
-  )..linkAll({VehicleMapper.container, ValuationsMapper.container});
+class VehicleValuationBodyMapper extends ClassMapperBase<VehicleValuationBody> {
+  VehicleValuationBodyMapper._();
 
-  @override
-  VehicleValuationBodyMapperElement createElement(MapperContainer container) {
-    return VehicleValuationBodyMapperElement._(this, container);
+  static VehicleValuationBodyMapper? _instance;
+  static VehicleValuationBodyMapper ensureInitialized() {
+    if (_instance == null) {
+      MapperContainer.globals.use(_instance = VehicleValuationBodyMapper._());
+      VehicleMapper.ensureInitialized();
+      ValuationsMapper.ensureInitialized();
+    }
+    return _instance!;
   }
 
   @override
-  String get id => 'VehicleValuationBody';
+  final String id = 'VehicleValuationBody';
 
-  static final fromMap = container.fromMap<VehicleValuationBody>;
-  static final fromJson = container.fromJson<VehicleValuationBody>;
-}
-
-class VehicleValuationBodyMapperElement
-    extends MapperElementBase<VehicleValuationBody> {
-  VehicleValuationBodyMapperElement._(super.mapper, super.container);
-
-  @override
-  Function get decoder => decode;
-  VehicleValuationBody decode(dynamic v) =>
-      checkedType(v, (Map<String, dynamic> map) => fromMap(map));
-  VehicleValuationBody fromMap(Map<String, dynamic> map) =>
-      VehicleValuationBody(
-          vehicle: container.$getOpt(map, 'vehicle'),
-          valuations: container.$getOpt(map, 'valuations'));
+  static Vehicle? _$vehicle(VehicleValuationBody v) => v.vehicle;
+  static const Field<VehicleValuationBody, Vehicle> _f$vehicle =
+      Field('vehicle', _$vehicle);
+  static Valuations? _$valuations(VehicleValuationBody v) => v.valuations;
+  static const Field<VehicleValuationBody, Valuations> _f$valuations =
+      Field('valuations', _$valuations);
 
   @override
-  Function get encoder => encode;
-  dynamic encode(VehicleValuationBody v) => toMap(v);
-  Map<String, dynamic> toMap(VehicleValuationBody v) => {
-        'vehicle': container.$enc(v.vehicle, 'vehicle'),
-        'valuations': container.$enc(v.valuations, 'valuations')
-      };
+  final MappableFields<VehicleValuationBody> fields = const {
+    #vehicle: _f$vehicle,
+    #valuations: _f$valuations,
+  };
+
+  static VehicleValuationBody _instantiate(DecodingData data) {
+    return VehicleValuationBody(
+        vehicle: data.dec(_f$vehicle), valuations: data.dec(_f$valuations));
+  }
 
   @override
-  String stringify(VehicleValuationBody self) =>
-      'VehicleValuationBody(vehicle: ${container.asString(self.vehicle)}, valuations: ${container.asString(self.valuations)})';
-  @override
-  int hash(VehicleValuationBody self) =>
-      container.hash(self.vehicle) ^ container.hash(self.valuations);
-  @override
-  bool equals(VehicleValuationBody self, VehicleValuationBody other) =>
-      container.isEqual(self.vehicle, other.vehicle) &&
-      container.isEqual(self.valuations, other.valuations);
+  final Function instantiate = _instantiate;
+
+  static VehicleValuationBody fromMap(Map<String, dynamic> map) {
+    return ensureInitialized().decodeMap<VehicleValuationBody>(map);
+  }
+
+  static VehicleValuationBody fromJson(String json) {
+    return ensureInitialized().decodeJson<VehicleValuationBody>(json);
+  }
 }
 
 mixin VehicleValuationBodyMappable {
-  String toJson() =>
-      VehicleValuationBodyMapper.container.toJson(this as VehicleValuationBody);
-  Map<String, dynamic> toMap() =>
-      VehicleValuationBodyMapper.container.toMap(this as VehicleValuationBody);
+  String toJson() {
+    return VehicleValuationBodyMapper.ensureInitialized()
+        .encodeJson<VehicleValuationBody>(this as VehicleValuationBody);
+  }
+
+  Map<String, dynamic> toMap() {
+    return VehicleValuationBodyMapper.ensureInitialized()
+        .encodeMap<VehicleValuationBody>(this as VehicleValuationBody);
+  }
+
   VehicleValuationBodyCopyWith<VehicleValuationBody, VehicleValuationBody,
           VehicleValuationBody>
       get copyWith => _VehicleValuationBodyCopyWithImpl(
           this as VehicleValuationBody, $identity, $identity);
   @override
-  String toString() => VehicleValuationBodyMapper.container.asString(this);
+  String toString() {
+    return VehicleValuationBodyMapper.ensureInitialized()
+        .stringifyValue(this as VehicleValuationBody);
+  }
+
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      (runtimeType == other.runtimeType &&
-          VehicleValuationBodyMapper.container.isEqual(this, other));
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (runtimeType == other.runtimeType &&
+            VehicleValuationBodyMapper.ensureInitialized()
+                .isValueEqual(this as VehicleValuationBody, other));
+  }
+
   @override
-  int get hashCode => VehicleValuationBodyMapper.container.hash(this);
+  int get hashCode {
+    return VehicleValuationBodyMapper.ensureInitialized()
+        .hashValue(this as VehicleValuationBody);
+  }
 }
 
-extension VehicleValuationBodyValueCopy<$R, $Out extends VehicleValuationBody>
+extension VehicleValuationBodyValueCopy<$R, $Out>
     on ObjectCopyWith<$R, VehicleValuationBody, $Out> {
   VehicleValuationBodyCopyWith<$R, VehicleValuationBody, $Out>
-      get asVehicleValuationBody =>
-          base.as((v, t, t2) => _VehicleValuationBodyCopyWithImpl(v, t, t2));
+      get $asVehicleValuationBody =>
+          $base.as((v, t, t2) => _VehicleValuationBodyCopyWithImpl(v, t, t2));
 }
 
-typedef VehicleValuationBodyCopyWithBound = VehicleValuationBody;
-
-abstract class VehicleValuationBodyCopyWith<$R,
-        $In extends VehicleValuationBody, $Out extends VehicleValuationBody>
-    implements ObjectCopyWith<$R, $In, $Out> {
-  VehicleValuationBodyCopyWith<$R2, $In, $Out2>
-      chain<$R2, $Out2 extends VehicleValuationBody>(
-          Then<VehicleValuationBody, $Out2> t, Then<$Out2, $R2> t2);
+abstract class VehicleValuationBodyCopyWith<
+    $R,
+    $In extends VehicleValuationBody,
+    $Out> implements ClassCopyWith<$R, $In, $Out> {
   VehicleCopyWith<$R, Vehicle, Vehicle>? get vehicle;
   ValuationsCopyWith<$R, Valuations, Valuations>? get valuations;
   $R call({Vehicle? vehicle, Valuations? valuations});
+  VehicleValuationBodyCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(
+      Then<$Out2, $R2> t);
 }
 
-class _VehicleValuationBodyCopyWithImpl<$R, $Out extends VehicleValuationBody>
-    extends CopyWithBase<$R, VehicleValuationBody, $Out>
+class _VehicleValuationBodyCopyWithImpl<$R, $Out>
+    extends ClassCopyWithBase<$R, VehicleValuationBody, $Out>
     implements VehicleValuationBodyCopyWith<$R, VehicleValuationBody, $Out> {
   _VehicleValuationBodyCopyWithImpl(super.value, super.then, super.then2);
-  @override
-  VehicleValuationBodyCopyWith<$R2, VehicleValuationBody, $Out2>
-      chain<$R2, $Out2 extends VehicleValuationBody>(
-              Then<VehicleValuationBody, $Out2> t, Then<$Out2, $R2> t2) =>
-          _VehicleValuationBodyCopyWithImpl($value, t, t2);
 
   @override
+  late final ClassMapperBase<VehicleValuationBody> $mapper =
+      VehicleValuationBodyMapper.ensureInitialized();
+  @override
   VehicleCopyWith<$R, Vehicle, Vehicle>? get vehicle =>
-      $value.vehicle?.copyWith.chain($identity, (v) => call(vehicle: v));
+      $value.vehicle?.copyWith.$chain((v) => call(vehicle: v));
   @override
   ValuationsCopyWith<$R, Valuations, Valuations>? get valuations =>
-      $value.valuations?.copyWith.chain($identity, (v) => call(valuations: v));
+      $value.valuations?.copyWith.$chain((v) => call(valuations: v));
   @override
   $R call({Object? vehicle = $none, Object? valuations = $none}) =>
-      $then(VehicleValuationBody(
-          vehicle: or(vehicle, $value.vehicle),
-          valuations: or(valuations, $value.valuations)));
+      $apply(FieldCopyWithData({
+        if (vehicle != $none) #vehicle: vehicle,
+        if (valuations != $none) #valuations: valuations
+      }));
+  @override
+  VehicleValuationBody $make(CopyWithData data) => VehicleValuationBody(
+      vehicle: data.get(#vehicle, or: $value.vehicle),
+      valuations: data.get(#valuations, or: $value.valuations));
+
+  @override
+  VehicleValuationBodyCopyWith<$R2, VehicleValuationBody, $Out2>
+      $chain<$R2, $Out2>(Then<$Out2, $R2> t) =>
+          _VehicleValuationBodyCopyWithImpl($value, $cast, t);
 }

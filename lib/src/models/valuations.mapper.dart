@@ -1,234 +1,266 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element
+// ignore_for_file: unused_element, unnecessary_cast
+// ignore_for_file: strict_raw_type, inference_failure_on_untyped_parameter
 
 part of 'valuations.dart';
 
-class ValuationsMapper extends MapperBase<Valuations> {
-  static MapperContainer container = MapperContainer(
-    mappers: {ValuationsMapper()},
-  )..linkAll({ValueMapper.container});
+class ValuationsMapper extends ClassMapperBase<Valuations> {
+  ValuationsMapper._();
 
-  @override
-  ValuationsMapperElement createElement(MapperContainer container) {
-    return ValuationsMapperElement._(this, container);
+  static ValuationsMapper? _instance;
+  static ValuationsMapper ensureInitialized() {
+    if (_instance == null) {
+      MapperContainer.globals.use(_instance = ValuationsMapper._());
+      ValueMapper.ensureInitialized();
+    }
+    return _instance!;
   }
 
   @override
-  String get id => 'Valuations';
+  final String id = 'Valuations';
 
-  static final fromMap = container.fromMap<Valuations>;
-  static final fromJson = container.fromJson<Valuations>;
-}
-
-class ValuationsMapperElement extends MapperElementBase<Valuations> {
-  ValuationsMapperElement._(super.mapper, super.container);
-
-  @override
-  Function get decoder => decode;
-  Valuations decode(dynamic v) =>
-      checkedType(v, (Map<String, dynamic> map) => fromMap(map));
-  Valuations fromMap(Map<String, dynamic> map) => Valuations(
-      trade: container.$getOpt(map, 'trade'),
-      partExchange: container.$getOpt(map, 'partExchange'),
-      retail: container.$getOpt(map, 'retail'),
-      private: container.$getOpt(map, 'private'));
+  static Value? _$trade(Valuations v) => v.trade;
+  static const Field<Valuations, Value> _f$trade =
+      Field('trade', _$trade, opt: true);
+  static Value? _$partExchange(Valuations v) => v.partExchange;
+  static const Field<Valuations, Value> _f$partExchange =
+      Field('partExchange', _$partExchange, opt: true);
+  static Value? _$retail(Valuations v) => v.retail;
+  static const Field<Valuations, Value> _f$retail =
+      Field('retail', _$retail, opt: true);
+  static Value? _$private(Valuations v) => v.private;
+  static const Field<Valuations, Value> _f$private =
+      Field('private', _$private, opt: true);
 
   @override
-  Function get encoder => encode;
-  dynamic encode(Valuations v) => toMap(v);
-  Map<String, dynamic> toMap(Valuations v) => {
-        'trade': container.$enc(v.trade, 'trade'),
-        'partExchange': container.$enc(v.partExchange, 'partExchange'),
-        'retail': container.$enc(v.retail, 'retail'),
-        'private': container.$enc(v.private, 'private')
-      };
+  final MappableFields<Valuations> fields = const {
+    #trade: _f$trade,
+    #partExchange: _f$partExchange,
+    #retail: _f$retail,
+    #private: _f$private,
+  };
+
+  static Valuations _instantiate(DecodingData data) {
+    return Valuations(
+        trade: data.dec(_f$trade),
+        partExchange: data.dec(_f$partExchange),
+        retail: data.dec(_f$retail),
+        private: data.dec(_f$private));
+  }
 
   @override
-  String stringify(Valuations self) =>
-      'Valuations(trade: ${container.asString(self.trade)}, partExchange: ${container.asString(self.partExchange)}, retail: ${container.asString(self.retail)}, private: ${container.asString(self.private)})';
-  @override
-  int hash(Valuations self) =>
-      container.hash(self.trade) ^
-      container.hash(self.partExchange) ^
-      container.hash(self.retail) ^
-      container.hash(self.private);
-  @override
-  bool equals(Valuations self, Valuations other) =>
-      container.isEqual(self.trade, other.trade) &&
-      container.isEqual(self.partExchange, other.partExchange) &&
-      container.isEqual(self.retail, other.retail) &&
-      container.isEqual(self.private, other.private);
+  final Function instantiate = _instantiate;
+
+  static Valuations fromMap(Map<String, dynamic> map) {
+    return ensureInitialized().decodeMap<Valuations>(map);
+  }
+
+  static Valuations fromJson(String json) {
+    return ensureInitialized().decodeJson<Valuations>(json);
+  }
 }
 
 mixin ValuationsMappable {
-  String toJson() => ValuationsMapper.container.toJson(this as Valuations);
-  Map<String, dynamic> toMap() =>
-      ValuationsMapper.container.toMap(this as Valuations);
+  String toJson() {
+    return ValuationsMapper.ensureInitialized()
+        .encodeJson<Valuations>(this as Valuations);
+  }
+
+  Map<String, dynamic> toMap() {
+    return ValuationsMapper.ensureInitialized()
+        .encodeMap<Valuations>(this as Valuations);
+  }
+
   ValuationsCopyWith<Valuations, Valuations, Valuations> get copyWith =>
       _ValuationsCopyWithImpl(this as Valuations, $identity, $identity);
   @override
-  String toString() => ValuationsMapper.container.asString(this);
+  String toString() {
+    return ValuationsMapper.ensureInitialized()
+        .stringifyValue(this as Valuations);
+  }
+
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      (runtimeType == other.runtimeType &&
-          ValuationsMapper.container.isEqual(this, other));
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (runtimeType == other.runtimeType &&
+            ValuationsMapper.ensureInitialized()
+                .isValueEqual(this as Valuations, other));
+  }
+
   @override
-  int get hashCode => ValuationsMapper.container.hash(this);
+  int get hashCode {
+    return ValuationsMapper.ensureInitialized().hashValue(this as Valuations);
+  }
 }
 
-extension ValuationsValueCopy<$R, $Out extends Valuations>
+extension ValuationsValueCopy<$R, $Out>
     on ObjectCopyWith<$R, Valuations, $Out> {
-  ValuationsCopyWith<$R, Valuations, $Out> get asValuations =>
-      base.as((v, t, t2) => _ValuationsCopyWithImpl(v, t, t2));
+  ValuationsCopyWith<$R, Valuations, $Out> get $asValuations =>
+      $base.as((v, t, t2) => _ValuationsCopyWithImpl(v, t, t2));
 }
 
-typedef ValuationsCopyWithBound = Valuations;
-
-abstract class ValuationsCopyWith<$R, $In extends Valuations,
-    $Out extends Valuations> implements ObjectCopyWith<$R, $In, $Out> {
-  ValuationsCopyWith<$R2, $In, $Out2> chain<$R2, $Out2 extends Valuations>(
-      Then<Valuations, $Out2> t, Then<$Out2, $R2> t2);
+abstract class ValuationsCopyWith<$R, $In extends Valuations, $Out>
+    implements ClassCopyWith<$R, $In, $Out> {
   ValueCopyWith<$R, Value, Value>? get trade;
   ValueCopyWith<$R, Value, Value>? get partExchange;
   ValueCopyWith<$R, Value, Value>? get retail;
   ValueCopyWith<$R, Value, Value>? get private;
   $R call({Value? trade, Value? partExchange, Value? retail, Value? private});
+  ValuationsCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
 
-class _ValuationsCopyWithImpl<$R, $Out extends Valuations>
-    extends CopyWithBase<$R, Valuations, $Out>
+class _ValuationsCopyWithImpl<$R, $Out>
+    extends ClassCopyWithBase<$R, Valuations, $Out>
     implements ValuationsCopyWith<$R, Valuations, $Out> {
   _ValuationsCopyWithImpl(super.value, super.then, super.then2);
-  @override
-  ValuationsCopyWith<$R2, Valuations, $Out2>
-      chain<$R2, $Out2 extends Valuations>(
-              Then<Valuations, $Out2> t, Then<$Out2, $R2> t2) =>
-          _ValuationsCopyWithImpl($value, t, t2);
 
   @override
+  late final ClassMapperBase<Valuations> $mapper =
+      ValuationsMapper.ensureInitialized();
+  @override
   ValueCopyWith<$R, Value, Value>? get trade =>
-      $value.trade?.copyWith.chain($identity, (v) => call(trade: v));
+      $value.trade?.copyWith.$chain((v) => call(trade: v));
   @override
   ValueCopyWith<$R, Value, Value>? get partExchange =>
-      $value.partExchange?.copyWith
-          .chain($identity, (v) => call(partExchange: v));
+      $value.partExchange?.copyWith.$chain((v) => call(partExchange: v));
   @override
   ValueCopyWith<$R, Value, Value>? get retail =>
-      $value.retail?.copyWith.chain($identity, (v) => call(retail: v));
+      $value.retail?.copyWith.$chain((v) => call(retail: v));
   @override
   ValueCopyWith<$R, Value, Value>? get private =>
-      $value.private?.copyWith.chain($identity, (v) => call(private: v));
+      $value.private?.copyWith.$chain((v) => call(private: v));
   @override
   $R call(
           {Object? trade = $none,
           Object? partExchange = $none,
           Object? retail = $none,
           Object? private = $none}) =>
-      $then(Valuations(
-          trade: or(trade, $value.trade),
-          partExchange: or(partExchange, $value.partExchange),
-          retail: or(retail, $value.retail),
-          private: or(private, $value.private)));
-}
-
-class ValueMapper extends MapperBase<Value> {
-  static MapperContainer container = MapperContainer(
-    mappers: {ValueMapper()},
-  );
+      $apply(FieldCopyWithData({
+        if (trade != $none) #trade: trade,
+        if (partExchange != $none) #partExchange: partExchange,
+        if (retail != $none) #retail: retail,
+        if (private != $none) #private: private
+      }));
+  @override
+  Valuations $make(CopyWithData data) => Valuations(
+      trade: data.get(#trade, or: $value.trade),
+      partExchange: data.get(#partExchange, or: $value.partExchange),
+      retail: data.get(#retail, or: $value.retail),
+      private: data.get(#private, or: $value.private));
 
   @override
-  ValueMapperElement createElement(MapperContainer container) {
-    return ValueMapperElement._(this, container);
+  ValuationsCopyWith<$R2, Valuations, $Out2> $chain<$R2, $Out2>(
+          Then<$Out2, $R2> t) =>
+      _ValuationsCopyWithImpl($value, $cast, t);
+}
+
+class ValueMapper extends ClassMapperBase<Value> {
+  ValueMapper._();
+
+  static ValueMapper? _instance;
+  static ValueMapper ensureInitialized() {
+    if (_instance == null) {
+      MapperContainer.globals.use(_instance = ValueMapper._());
+    }
+    return _instance!;
   }
 
   @override
-  String get id => 'Value';
+  final String id = 'Value';
 
-  static final fromMap = container.fromMap<Value>;
-  static final fromJson = container.fromJson<Value>;
-}
-
-class ValueMapperElement extends MapperElementBase<Value> {
-  ValueMapperElement._(super.mapper, super.container);
-
-  @override
-  Function get decoder => decode;
-  Value decode(dynamic v) =>
-      checkedType(v, (Map<String, dynamic> map) => fromMap(map));
-  Value fromMap(Map<String, dynamic> map) => Value(
-      amountGBP: container.$getOpt(map, 'amountGBP'),
-      amountExcludingVatGBP: container.$getOpt(map, 'amountExcludingVatGBP'));
+  static int? _$amountGBP(Value v) => v.amountGBP;
+  static const Field<Value, int> _f$amountGBP =
+      Field('amountGBP', _$amountGBP, opt: true);
+  static int? _$amountExcludingVatGBP(Value v) => v.amountExcludingVatGBP;
+  static const Field<Value, int> _f$amountExcludingVatGBP =
+      Field('amountExcludingVatGBP', _$amountExcludingVatGBP, opt: true);
 
   @override
-  Function get encoder => encode;
-  dynamic encode(Value v) => toMap(v);
-  Map<String, dynamic> toMap(Value v) => {
-        'amountGBP': container.$enc(v.amountGBP, 'amountGBP'),
-        'amountExcludingVatGBP':
-            container.$enc(v.amountExcludingVatGBP, 'amountExcludingVatGBP')
-      };
+  final MappableFields<Value> fields = const {
+    #amountGBP: _f$amountGBP,
+    #amountExcludingVatGBP: _f$amountExcludingVatGBP,
+  };
+
+  static Value _instantiate(DecodingData data) {
+    return Value(
+        amountGBP: data.dec(_f$amountGBP),
+        amountExcludingVatGBP: data.dec(_f$amountExcludingVatGBP));
+  }
 
   @override
-  String stringify(Value self) =>
-      'Value(amountGBP: ${container.asString(self.amountGBP)}, amountExcludingVatGBP: ${container.asString(self.amountExcludingVatGBP)})';
-  @override
-  int hash(Value self) =>
-      container.hash(self.amountGBP) ^
-      container.hash(self.amountExcludingVatGBP);
-  @override
-  bool equals(Value self, Value other) =>
-      container.isEqual(self.amountGBP, other.amountGBP) &&
-      container.isEqual(
-          self.amountExcludingVatGBP, other.amountExcludingVatGBP);
+  final Function instantiate = _instantiate;
+
+  static Value fromMap(Map<String, dynamic> map) {
+    return ensureInitialized().decodeMap<Value>(map);
+  }
+
+  static Value fromJson(String json) {
+    return ensureInitialized().decodeJson<Value>(json);
+  }
 }
 
 mixin ValueMappable {
-  String toJson() => ValueMapper.container.toJson(this as Value);
-  Map<String, dynamic> toMap() => ValueMapper.container.toMap(this as Value);
+  String toJson() {
+    return ValueMapper.ensureInitialized().encodeJson<Value>(this as Value);
+  }
+
+  Map<String, dynamic> toMap() {
+    return ValueMapper.ensureInitialized().encodeMap<Value>(this as Value);
+  }
+
   ValueCopyWith<Value, Value, Value> get copyWith =>
       _ValueCopyWithImpl(this as Value, $identity, $identity);
   @override
-  String toString() => ValueMapper.container.asString(this);
+  String toString() {
+    return ValueMapper.ensureInitialized().stringifyValue(this as Value);
+  }
+
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      (runtimeType == other.runtimeType &&
-          ValueMapper.container.isEqual(this, other));
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (runtimeType == other.runtimeType &&
+            ValueMapper.ensureInitialized().isValueEqual(this as Value, other));
+  }
+
   @override
-  int get hashCode => ValueMapper.container.hash(this);
+  int get hashCode {
+    return ValueMapper.ensureInitialized().hashValue(this as Value);
+  }
 }
 
-extension ValueValueCopy<$R, $Out extends Value>
-    on ObjectCopyWith<$R, Value, $Out> {
-  ValueCopyWith<$R, Value, $Out> get asValue =>
-      base.as((v, t, t2) => _ValueCopyWithImpl(v, t, t2));
+extension ValueValueCopy<$R, $Out> on ObjectCopyWith<$R, Value, $Out> {
+  ValueCopyWith<$R, Value, $Out> get $asValue =>
+      $base.as((v, t, t2) => _ValueCopyWithImpl(v, t, t2));
 }
 
-typedef ValueCopyWithBound = Value;
-
-abstract class ValueCopyWith<$R, $In extends Value, $Out extends Value>
-    implements ObjectCopyWith<$R, $In, $Out> {
-  ValueCopyWith<$R2, $In, $Out2> chain<$R2, $Out2 extends Value>(
-      Then<Value, $Out2> t, Then<$Out2, $R2> t2);
+abstract class ValueCopyWith<$R, $In extends Value, $Out>
+    implements ClassCopyWith<$R, $In, $Out> {
   $R call({int? amountGBP, int? amountExcludingVatGBP});
+  ValueCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
 
-class _ValueCopyWithImpl<$R, $Out extends Value>
-    extends CopyWithBase<$R, Value, $Out>
+class _ValueCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Value, $Out>
     implements ValueCopyWith<$R, Value, $Out> {
   _ValueCopyWithImpl(super.value, super.then, super.then2);
-  @override
-  ValueCopyWith<$R2, Value, $Out2> chain<$R2, $Out2 extends Value>(
-          Then<Value, $Out2> t, Then<$Out2, $R2> t2) =>
-      _ValueCopyWithImpl($value, t, t2);
 
   @override
+  late final ClassMapperBase<Value> $mapper = ValueMapper.ensureInitialized();
+  @override
   $R call({Object? amountGBP = $none, Object? amountExcludingVatGBP = $none}) =>
-      $then(Value(
-          amountGBP: or(amountGBP, $value.amountGBP),
-          amountExcludingVatGBP:
-              or(amountExcludingVatGBP, $value.amountExcludingVatGBP)));
+      $apply(FieldCopyWithData({
+        if (amountGBP != $none) #amountGBP: amountGBP,
+        if (amountExcludingVatGBP != $none)
+          #amountExcludingVatGBP: amountExcludingVatGBP
+      }));
+  @override
+  Value $make(CopyWithData data) => Value(
+      amountGBP: data.get(#amountGBP, or: $value.amountGBP),
+      amountExcludingVatGBP:
+          data.get(#amountExcludingVatGBP, or: $value.amountExcludingVatGBP));
+
+  @override
+  ValueCopyWith<$R2, Value, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t) =>
+      _ValueCopyWithImpl($value, $cast, t);
 }

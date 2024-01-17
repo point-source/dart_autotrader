@@ -1,5 +1,6 @@
 import "dart:async";
 import 'package:chopper/chopper.dart';
+import 'package:dart_autotrader/dart_autotrader.init.dart';
 import 'package:dart_autotrader/src/models/body/vehicle_valuation.dart';
 
 import 'models/body/authenticate.dart';
@@ -11,7 +12,11 @@ part "dart_autotrader_base.chopper.dart";
 abstract class Autotrader extends ChopperService {
   /// A helper method that helps instantiating the service.
   /// You can omit this method and use the generated class directly instead.
-  static Autotrader create([ChopperClient? client]) => _$Autotrader(client);
+  static Autotrader create([ChopperClient? client]) {
+    initializeMappers();
+
+    return _$Autotrader(client);
+  }
 
   /// Retrieves a temporary auth token
   @Post(path: 'authenticate')

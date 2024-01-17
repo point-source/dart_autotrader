@@ -1,133 +1,145 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element
+// ignore_for_file: unused_element, unnecessary_cast
+// ignore_for_file: strict_raw_type, inference_failure_on_untyped_parameter
 
 part of 'oem.dart';
 
-class OemMapper extends MapperBase<Oem> {
-  static MapperContainer container = MapperContainer(
-    mappers: {OemMapper()},
-  );
+class OemMapper extends ClassMapperBase<Oem> {
+  OemMapper._();
 
-  @override
-  OemMapperElement createElement(MapperContainer container) {
-    return OemMapperElement._(this, container);
+  static OemMapper? _instance;
+  static OemMapper ensureInitialized() {
+    if (_instance == null) {
+      MapperContainer.globals.use(_instance = OemMapper._());
+    }
+    return _instance!;
   }
 
   @override
-  String get id => 'Oem';
+  final String id = 'Oem';
 
-  static final fromMap = container.fromMap<Oem>;
-  static final fromJson = container.fromJson<Oem>;
-}
-
-class OemMapperElement extends MapperElementBase<Oem> {
-  OemMapperElement._(super.mapper, super.container);
-
-  @override
-  Function get decoder => decode;
-  Oem decode(dynamic v) =>
-      checkedType(v, (Map<String, dynamic> map) => fromMap(map));
-  Oem fromMap(Map<String, dynamic> map) => Oem(
-      make: container.$getOpt(map, 'make'),
-      model: container.$getOpt(map, 'model'),
-      derivative: container.$getOpt(map, 'derivative'),
-      bodyType: container.$getOpt(map, 'bodyType'),
-      transmissionType: container.$getOpt(map, 'transmissionType'),
-      drivetrain: container.$getOpt(map, 'drivetrain'),
-      wheelbaseType: container.$getOpt(map, 'wheelbaseType'),
-      roofHeightType: container.$getOpt(map, 'roofHeightType'),
-      engineType: container.$getOpt(map, 'engineType'),
-      engineTechnology: container.$getOpt(map, 'engineTechnology'),
-      engineMarketing: container.$getOpt(map, 'engineMarketing'),
-      editionDescription: container.$getOpt(map, 'editionDescription'),
-      colour: container.$getOpt(map, 'colour'));
-
-  @override
-  Function get encoder => encode;
-  dynamic encode(Oem v) => toMap(v);
-  Map<String, dynamic> toMap(Oem o) => {
-        'make': container.$enc(o.make, 'make'),
-        'model': container.$enc(o.model, 'model'),
-        'derivative': container.$enc(o.derivative, 'derivative'),
-        'bodyType': container.$enc(o.bodyType, 'bodyType'),
-        'transmissionType':
-            container.$enc(o.transmissionType, 'transmissionType'),
-        'drivetrain': container.$enc(o.drivetrain, 'drivetrain'),
-        'wheelbaseType': container.$enc(o.wheelbaseType, 'wheelbaseType'),
-        'roofHeightType': container.$enc(o.roofHeightType, 'roofHeightType'),
-        'engineType': container.$enc(o.engineType, 'engineType'),
-        'engineTechnology':
-            container.$enc(o.engineTechnology, 'engineTechnology'),
-        'engineMarketing': container.$enc(o.engineMarketing, 'engineMarketing'),
-        'editionDescription':
-            container.$enc(o.editionDescription, 'editionDescription'),
-        'colour': container.$enc(o.colour, 'colour')
-      };
+  static String? _$make(Oem v) => v.make;
+  static const Field<Oem, String> _f$make = Field('make', _$make, opt: true);
+  static String? _$model(Oem v) => v.model;
+  static const Field<Oem, String> _f$model = Field('model', _$model, opt: true);
+  static String? _$derivative(Oem v) => v.derivative;
+  static const Field<Oem, String> _f$derivative =
+      Field('derivative', _$derivative, opt: true);
+  static String? _$bodyType(Oem v) => v.bodyType;
+  static const Field<Oem, String> _f$bodyType =
+      Field('bodyType', _$bodyType, opt: true);
+  static String? _$transmissionType(Oem v) => v.transmissionType;
+  static const Field<Oem, String> _f$transmissionType =
+      Field('transmissionType', _$transmissionType, opt: true);
+  static String? _$drivetrain(Oem v) => v.drivetrain;
+  static const Field<Oem, String> _f$drivetrain =
+      Field('drivetrain', _$drivetrain, opt: true);
+  static String? _$wheelbaseType(Oem v) => v.wheelbaseType;
+  static const Field<Oem, String> _f$wheelbaseType =
+      Field('wheelbaseType', _$wheelbaseType, opt: true);
+  static String? _$roofHeightType(Oem v) => v.roofHeightType;
+  static const Field<Oem, String> _f$roofHeightType =
+      Field('roofHeightType', _$roofHeightType, opt: true);
+  static String? _$engineType(Oem v) => v.engineType;
+  static const Field<Oem, String> _f$engineType =
+      Field('engineType', _$engineType, opt: true);
+  static String? _$engineTechnology(Oem v) => v.engineTechnology;
+  static const Field<Oem, String> _f$engineTechnology =
+      Field('engineTechnology', _$engineTechnology, opt: true);
+  static String? _$engineMarketing(Oem v) => v.engineMarketing;
+  static const Field<Oem, String> _f$engineMarketing =
+      Field('engineMarketing', _$engineMarketing, opt: true);
+  static String? _$editionDescription(Oem v) => v.editionDescription;
+  static const Field<Oem, String> _f$editionDescription =
+      Field('editionDescription', _$editionDescription, opt: true);
+  static String? _$colour(Oem v) => v.colour;
+  static const Field<Oem, String> _f$colour =
+      Field('colour', _$colour, opt: true);
 
   @override
-  String stringify(Oem self) =>
-      'Oem(make: ${container.asString(self.make)}, model: ${container.asString(self.model)}, derivative: ${container.asString(self.derivative)}, bodyType: ${container.asString(self.bodyType)}, transmissionType: ${container.asString(self.transmissionType)}, drivetrain: ${container.asString(self.drivetrain)}, wheelbaseType: ${container.asString(self.wheelbaseType)}, roofHeightType: ${container.asString(self.roofHeightType)}, engineType: ${container.asString(self.engineType)}, engineTechnology: ${container.asString(self.engineTechnology)}, engineMarketing: ${container.asString(self.engineMarketing)}, editionDescription: ${container.asString(self.editionDescription)}, colour: ${container.asString(self.colour)})';
+  final MappableFields<Oem> fields = const {
+    #make: _f$make,
+    #model: _f$model,
+    #derivative: _f$derivative,
+    #bodyType: _f$bodyType,
+    #transmissionType: _f$transmissionType,
+    #drivetrain: _f$drivetrain,
+    #wheelbaseType: _f$wheelbaseType,
+    #roofHeightType: _f$roofHeightType,
+    #engineType: _f$engineType,
+    #engineTechnology: _f$engineTechnology,
+    #engineMarketing: _f$engineMarketing,
+    #editionDescription: _f$editionDescription,
+    #colour: _f$colour,
+  };
+
+  static Oem _instantiate(DecodingData data) {
+    return Oem(
+        make: data.dec(_f$make),
+        model: data.dec(_f$model),
+        derivative: data.dec(_f$derivative),
+        bodyType: data.dec(_f$bodyType),
+        transmissionType: data.dec(_f$transmissionType),
+        drivetrain: data.dec(_f$drivetrain),
+        wheelbaseType: data.dec(_f$wheelbaseType),
+        roofHeightType: data.dec(_f$roofHeightType),
+        engineType: data.dec(_f$engineType),
+        engineTechnology: data.dec(_f$engineTechnology),
+        engineMarketing: data.dec(_f$engineMarketing),
+        editionDescription: data.dec(_f$editionDescription),
+        colour: data.dec(_f$colour));
+  }
+
   @override
-  int hash(Oem self) =>
-      container.hash(self.make) ^
-      container.hash(self.model) ^
-      container.hash(self.derivative) ^
-      container.hash(self.bodyType) ^
-      container.hash(self.transmissionType) ^
-      container.hash(self.drivetrain) ^
-      container.hash(self.wheelbaseType) ^
-      container.hash(self.roofHeightType) ^
-      container.hash(self.engineType) ^
-      container.hash(self.engineTechnology) ^
-      container.hash(self.engineMarketing) ^
-      container.hash(self.editionDescription) ^
-      container.hash(self.colour);
-  @override
-  bool equals(Oem self, Oem other) =>
-      container.isEqual(self.make, other.make) &&
-      container.isEqual(self.model, other.model) &&
-      container.isEqual(self.derivative, other.derivative) &&
-      container.isEqual(self.bodyType, other.bodyType) &&
-      container.isEqual(self.transmissionType, other.transmissionType) &&
-      container.isEqual(self.drivetrain, other.drivetrain) &&
-      container.isEqual(self.wheelbaseType, other.wheelbaseType) &&
-      container.isEqual(self.roofHeightType, other.roofHeightType) &&
-      container.isEqual(self.engineType, other.engineType) &&
-      container.isEqual(self.engineTechnology, other.engineTechnology) &&
-      container.isEqual(self.engineMarketing, other.engineMarketing) &&
-      container.isEqual(self.editionDescription, other.editionDescription) &&
-      container.isEqual(self.colour, other.colour);
+  final Function instantiate = _instantiate;
+
+  static Oem fromMap(Map<String, dynamic> map) {
+    return ensureInitialized().decodeMap<Oem>(map);
+  }
+
+  static Oem fromJson(String json) {
+    return ensureInitialized().decodeJson<Oem>(json);
+  }
 }
 
 mixin OemMappable {
-  String toJson() => OemMapper.container.toJson(this as Oem);
-  Map<String, dynamic> toMap() => OemMapper.container.toMap(this as Oem);
+  String toJson() {
+    return OemMapper.ensureInitialized().encodeJson<Oem>(this as Oem);
+  }
+
+  Map<String, dynamic> toMap() {
+    return OemMapper.ensureInitialized().encodeMap<Oem>(this as Oem);
+  }
+
   OemCopyWith<Oem, Oem, Oem> get copyWith =>
       _OemCopyWithImpl(this as Oem, $identity, $identity);
   @override
-  String toString() => OemMapper.container.asString(this);
+  String toString() {
+    return OemMapper.ensureInitialized().stringifyValue(this as Oem);
+  }
+
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      (runtimeType == other.runtimeType &&
-          OemMapper.container.isEqual(this, other));
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (runtimeType == other.runtimeType &&
+            OemMapper.ensureInitialized().isValueEqual(this as Oem, other));
+  }
+
   @override
-  int get hashCode => OemMapper.container.hash(this);
+  int get hashCode {
+    return OemMapper.ensureInitialized().hashValue(this as Oem);
+  }
 }
 
-extension OemValueCopy<$R, $Out extends Oem> on ObjectCopyWith<$R, Oem, $Out> {
-  OemCopyWith<$R, Oem, $Out> get asOem =>
-      base.as((v, t, t2) => _OemCopyWithImpl(v, t, t2));
+extension OemValueCopy<$R, $Out> on ObjectCopyWith<$R, Oem, $Out> {
+  OemCopyWith<$R, Oem, $Out> get $asOem =>
+      $base.as((v, t, t2) => _OemCopyWithImpl(v, t, t2));
 }
 
-typedef OemCopyWithBound = Oem;
-
-abstract class OemCopyWith<$R, $In extends Oem, $Out extends Oem>
-    implements ObjectCopyWith<$R, $In, $Out> {
-  OemCopyWith<$R2, $In, $Out2> chain<$R2, $Out2 extends Oem>(
-      Then<Oem, $Out2> t, Then<$Out2, $R2> t2);
+abstract class OemCopyWith<$R, $In extends Oem, $Out>
+    implements ClassCopyWith<$R, $In, $Out> {
   $R call(
       {String? make,
       String? model,
@@ -142,16 +154,15 @@ abstract class OemCopyWith<$R, $In extends Oem, $Out extends Oem>
       String? engineMarketing,
       String? editionDescription,
       String? colour});
+  OemCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
 
-class _OemCopyWithImpl<$R, $Out extends Oem> extends CopyWithBase<$R, Oem, $Out>
+class _OemCopyWithImpl<$R, $Out> extends ClassCopyWithBase<$R, Oem, $Out>
     implements OemCopyWith<$R, Oem, $Out> {
   _OemCopyWithImpl(super.value, super.then, super.then2);
-  @override
-  OemCopyWith<$R2, Oem, $Out2> chain<$R2, $Out2 extends Oem>(
-          Then<Oem, $Out2> t, Then<$Out2, $R2> t2) =>
-      _OemCopyWithImpl($value, t, t2);
 
+  @override
+  late final ClassMapperBase<Oem> $mapper = OemMapper.ensureInitialized();
   @override
   $R call(
           {Object? make = $none,
@@ -167,18 +178,42 @@ class _OemCopyWithImpl<$R, $Out extends Oem> extends CopyWithBase<$R, Oem, $Out>
           Object? engineMarketing = $none,
           Object? editionDescription = $none,
           Object? colour = $none}) =>
-      $then(Oem(
-          make: or(make, $value.make),
-          model: or(model, $value.model),
-          derivative: or(derivative, $value.derivative),
-          bodyType: or(bodyType, $value.bodyType),
-          transmissionType: or(transmissionType, $value.transmissionType),
-          drivetrain: or(drivetrain, $value.drivetrain),
-          wheelbaseType: or(wheelbaseType, $value.wheelbaseType),
-          roofHeightType: or(roofHeightType, $value.roofHeightType),
-          engineType: or(engineType, $value.engineType),
-          engineTechnology: or(engineTechnology, $value.engineTechnology),
-          engineMarketing: or(engineMarketing, $value.engineMarketing),
-          editionDescription: or(editionDescription, $value.editionDescription),
-          colour: or(colour, $value.colour)));
+      $apply(FieldCopyWithData({
+        if (make != $none) #make: make,
+        if (model != $none) #model: model,
+        if (derivative != $none) #derivative: derivative,
+        if (bodyType != $none) #bodyType: bodyType,
+        if (transmissionType != $none) #transmissionType: transmissionType,
+        if (drivetrain != $none) #drivetrain: drivetrain,
+        if (wheelbaseType != $none) #wheelbaseType: wheelbaseType,
+        if (roofHeightType != $none) #roofHeightType: roofHeightType,
+        if (engineType != $none) #engineType: engineType,
+        if (engineTechnology != $none) #engineTechnology: engineTechnology,
+        if (engineMarketing != $none) #engineMarketing: engineMarketing,
+        if (editionDescription != $none)
+          #editionDescription: editionDescription,
+        if (colour != $none) #colour: colour
+      }));
+  @override
+  Oem $make(CopyWithData data) => Oem(
+      make: data.get(#make, or: $value.make),
+      model: data.get(#model, or: $value.model),
+      derivative: data.get(#derivative, or: $value.derivative),
+      bodyType: data.get(#bodyType, or: $value.bodyType),
+      transmissionType:
+          data.get(#transmissionType, or: $value.transmissionType),
+      drivetrain: data.get(#drivetrain, or: $value.drivetrain),
+      wheelbaseType: data.get(#wheelbaseType, or: $value.wheelbaseType),
+      roofHeightType: data.get(#roofHeightType, or: $value.roofHeightType),
+      engineType: data.get(#engineType, or: $value.engineType),
+      engineTechnology:
+          data.get(#engineTechnology, or: $value.engineTechnology),
+      engineMarketing: data.get(#engineMarketing, or: $value.engineMarketing),
+      editionDescription:
+          data.get(#editionDescription, or: $value.editionDescription),
+      colour: data.get(#colour, or: $value.colour));
+
+  @override
+  OemCopyWith<$R2, Oem, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t) =>
+      _OemCopyWithImpl($value, $cast, t);
 }
